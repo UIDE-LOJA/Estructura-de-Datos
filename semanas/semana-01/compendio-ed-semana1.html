@@ -125,6 +125,72 @@
         .comparison-table tr:nth-child(even) {
             background-color: #f9f9f9;
         }
+
+        /* Flashcards styling */
+        .flashcards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .flashcard {
+            perspective: 1000px;
+            height: 200px;
+            cursor: pointer;
+        }
+
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--uide-primary), var(--uide-secondary));
+            color: white;
+        }
+
+        .flashcard-back {
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--uide-primary);
+            transform: rotateY(180deg);
+            border: 2px solid var(--uide-accent);
+        }
+
+        .flashcard h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2em;
+        }
+
+        .flashcard p {
+            margin: 0.5rem 0;
+        }
+
+        .flashcard small {
+            margin-top: auto;
+            opacity: 0.8;
+        }
     </style>
 </head>
 
@@ -531,6 +597,221 @@
                 </section>
             </section>
 
+            <!-- Conceptos Clave - Flashcards Interactivas -->
+            <section>
+                <h2>Conceptos Clave - Flashcards Interactivas</h2>
+                <section>
+                    <div class="flashcards-grid">
+                        <!-- Card 1 -->
+                        <div class="flashcard" onclick="flipCard(this)">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <h4>Notación Big-O</h4>
+                                    <p>¿Qué mide la notación Big-O?</p>
+                                </div>
+                                <div class="flashcard-back">
+                                    <h4>Complejidad Algorítmica</h4>
+                                    <p>Mide la <strong>eficiencia y rendimiento</strong> de un algoritmo describiendo cómo crece la complejidad en función del tamaño de entrada "n".</p>
+                                    <small>Análisis del peor caso</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="flashcard" onclick="flipCard(this)">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <h4>TDA (Tipo de Dato Abstracto)</h4>
+                                    <p>¿Qué es un TDA?</p>
+                                </div>
+                                <div class="flashcard-back">
+                                    <h4>Modelo Matemático</h4>
+                                    <p>Un <strong>modelo matemático</strong> que define un conjunto de datos y operaciones, separando la <strong>interfaz</strong> de la <strong>implementación</strong>.</p>
+                                    <small>Abstracción de datos</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flashcards-grid">
+                        <!-- Card 3 -->
+                        <div class="flashcard" onclick="flipCard(this)">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <h4>Complejidades Comunes</h4>
+                                    <p>¿Cuáles son las principales complejidades Big-O?</p>
+                                </div>
+                                <div class="flashcard-back">
+                                    <h4>O(1), O(n), O(log n), O(n²)</h4>
+                                    <p><strong>O(1):</strong> constante, <strong>O(n):</strong> lineal, <strong>O(log n):</strong> logarítmica, <strong>O(n²):</strong> cuadrática.</p>
+                                    <small>De mejor a peor rendimiento</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="flashcard" onclick="flipCard(this)">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <h4>Estática vs Dinámica</h4>
+                                    <p>¿Cuál es la diferencia entre representación estática y dinámica?</p>
+                                </div>
+                                <div class="flashcard-back">
+                                    <h4>Arreglos vs Punteros</h4>
+                                    <p><strong>Estática:</strong> arreglos con tamaño fijo O(1). <strong>Dinámica:</strong> nodos/punteros con flexibilidad O(n).</p>
+                                    <small>Velocidad vs flexibilidad</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flashcards-grid">
+                        <!-- Card 5 -->
+                        <div class="flashcard" onclick="flipCard(this)">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <h4>Ejemplos de TDA</h4>
+                                    <p>¿Cuáles son los TDA fundamentales?</p>
+                                    <small>Clic para ver respuesta</small>
+                                </div>
+                                <div class="flashcard-back">
+                                    <h4>Contenedores de Datos</h4>
+                                    <p><strong>Listas, Pilas (LIFO), Colas (FIFO), Diccionarios</strong> y <strong>Árboles</strong> - agregaciones de datos con operaciones específicas.</p>
+                                    <small>Estructuras fundamentales</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="flashcard" onclick="flipCard(this)">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <h4>Trade-offs</h4>
+                                    <p>¿Qué considerar al elegir una representación?</p>
+                                    <small>Clic para ver respuesta</small>
+                                </div>
+                                <div class="flashcard-back">
+                                    <h4>Tiempo vs Espacio vs Flexibilidad</h4>
+                                    <p><strong>Arreglos:</strong> rápidos pero fijos. <strong>Listas enlazadas:</strong> flexibles pero lentas. <strong>Árboles:</strong> equilibrio óptimo.</p>
+                                    <small>Cada estructura tiene su lugar</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Referencias -->
+            <section data-background-color="#f8f8f8">
+                <h2>Referencias (Formato APA)</h2>
+                <div style="font-size: 0.7em; text-align: left; max-height: 500px; overflow-y: auto;">
+                    <p>Alves, S. (2024, 29 de octubre). Complejidad algorítmica: Notación Big-O. Alveritmos.</p>
+                    <p>Campos, J. (2022). <em>Apuntes de Estructuras de Datos y Algoritmos</em> (2a ed., v. 4). Departamento de Informática e Ingeniería de Sistemas, Universidad de Zaragoza.</p>
+                    <p>Corporación Universitaria Remington. (s.f.). <em>Estructuras de Datos</em>. (Obra publicada bajo licencia Creative Commons).</p>
+                    <p>De León, H. [@hdeleonnet]. (2024, 18 de abril). Notación Big O Explicado con Código [Video]. YouTube.</p>
+                    <p>Señas, P., & Martig, S. (2005). <em>Estructuras de Datos y Algoritmos: Módulo I Tipos de datos, estructuras de datos y tipos de datos abstractos</em>.</p>
+                    <p>Villca Gutierrez, C. F. (Traductor). (2024, 1 de febrero). Guía: Notación Big O - Gráfico de complejidad de tiempo. freeCodeCamp.</p>
+                </div>
+            </section>
+
+            <!-- Graded Activities -->
+            <section data-background-color="#f8f8f8" data-transition="convex">
+                <h2>Actividades Calificadas - Semana 1</h2>
+                <section>
+                    <h3>Fundamentos de Estructuras de Datos</h3>
+                    <p style="text-align: center; font-style: italic; color: var(--uide-secondary);">
+                        Aplicación práctica de los conceptos aprendidos
+                    </p>
+                </section>
+
+                <section>
+                    <h3>PE-1.1: Análisis de Complejidad</h3>
+                    <div class="concept-box">
+                        <h4 style="color: var(--uide-primary);">Práctico Experimental 1.1</h4>
+                        <p><strong>Actividad:</strong> Analizar la complejidad Big-O de 6 algoritmos diferentes</p>
+                        <p><strong>Enfoque:</strong> Identificación de complejidades temporales y espaciales</p>
+                        <ul style="text-align: left;">
+                            <li>Análisis de algoritmos de búsqueda y ordenamiento</li>
+                            <li>Clasificación por complejidad (O(1), O(n), O(log n), O(n²))</li>
+                            <li>Justificación teórica de cada análisis</li>
+                        </ul>
+                        <div
+                            style="background: rgba(233, 171, 33, 0.1); padding: 1em; border-radius: 8px; margin: 1em 0;">
+                            <strong>Puntaje:</strong> 2.25 puntos<br>
+                            <strong>Modalidad:</strong> Taller en clase con análisis grupal
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>TA-1.1: Investigación de TDA</h3>
+                    <div class="concept-box">
+                        <h4 style="color: var(--uide-secondary);">Trabajo Autónomo 1.1</h4>
+                        <p><strong>Actividad:</strong> Investigación sobre implementaciones de TDA</p>
+                        <p><strong>Enfoque:</strong> Comparar diferentes implementaciones de estructuras de datos</p>
+                        <ul style="text-align: left;">
+                            <li>Investigación de implementaciones estáticas vs dinámicas</li>
+                            <li>Elaboración de cuadro comparativo</li>
+                            <li>Análisis de ventajas y desventajas</li>
+                            <li>Casos de uso recomendados para cada implementación</li>
+                        </ul>
+                        <div
+                            style="background: rgba(145, 0, 72, 0.1); padding: 1em; border-radius: 8px; margin: 1em 0;">
+                            <strong>Puntaje:</strong> 2.25 puntos<br>
+                            <strong>Formato:</strong> 1 página con cuadro comparativo<br>
+                            <strong>Herramienta:</strong> NotebookLM, recursos bibliográficos
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Metodología de Trabajo</h3>
+                    <div class="r-hstack">
+                        <div class="column">
+                            <div class="concept-box">
+                                <h4>Herramientas de Aprendizaje</h4>
+                                <ul style="text-align: left; font-size: 0.9em;">
+                                    <li>NotebookLM para análisis</li>
+                                    <li>Recursos bibliográficos especializados</li>
+                                    <li>Simuladores de algoritmos</li>
+                                    <li>Casos de estudio de implementaciones</li>
+                                    <li>Tarjetas didácticas interactivas</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="concept-box">
+                                <h4>Criterios de Evaluación</h4>
+                                <ul style="text-align: left; font-size: 0.9em;">
+                                    <li>Comprensión de complejidad algorítmica</li>
+                                    <li>Análisis correcto de Big-O</li>
+                                    <li>Calidad del análisis comparativo</li>
+                                    <li>Fundamentación teórica sólida</li>
+                                    <li>Presentación clara y organizada</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-background-color="#f8f8f8">
+                    <div class="title-slide">
+                        <h1 style="color: var(--uide-primary);">¡A Programar!</h1>
+                        <h3>Apliquemos las estructuras de datos en el mundo real</h3>
+
+                        <div style="margin-top: 2em; font-size: 0.9em;">
+                            <strong>Universidad Internacional del Ecuador</strong><br>
+                            <em>Semana 1 - Fundamentos de Estructuras de Datos</em><br>
+                            <strong>Total de puntos:</strong> 4.5/30 - Evaluación Diagnóstica
+                        </div>
+                    </div>
+                </section>
+            </section>
+
             <!-- Conclusiones -->
             <section data-transition="convex">
                 <h2>Conclusiones</h2>
@@ -590,35 +871,20 @@
                 </section>
             </section>
 
-            <!-- Referencias -->
-            <section data-background-color="#f8f8f8">
-                <h2>Referencias</h2>
-                <div class="concept-box" style="font-size: 0.8em; text-align: left;">
-                    <ul>
-                        <li>Alves, S. (2024). Complejidad algorítmica: Notación Big-O. Alveritmos.</li>
-                        <li>Campos, J. (2022). Apuntes de Estructuras de Datos y Algoritmos (2a ed., v. 4). Universidad de Zaragoza.</li>
-                        <li>Corporación Universitaria Remington. (s.f.). Estructuras de Datos.</li>
-                        <li>De León, H. (2024). Notación Big O Explicado con Código [Video]. YouTube.</li>
-                        <li>Señas, P., & Martig, S. (2005). Estructuras de Datos y Algoritmos: Módulo I.</li>
-                        <li>Universidad Nacional del Sur (UNS). (s.f.). Estructuras de Datos Clase 4 – Pilas y colas.</li>
-                        <li>Villca Gutierrez, C. F. (2024). Guía: Notación Big O - Gráfico de complejidad de tiempo. freeCodeCamp.</li>
-                    </ul>
-                </div>
-            </section>
-
             <!-- Final Slide -->
-            <section data-background-color="#23356e" data-transition="convex">
-                <div style="color: white; text-align: center;">
-                    <h1>¡Gracias!</h1>
-                    <h3>Estructuras de Datos - Semana 1</h3>
-                    <p style="margin-top: 2em;">
-                        <strong>Prof. Charlie Cárdenas Toledo, M.Sc.</strong><br>
-                        Universidad Internacional del Ecuador<br>
-                        <em>charlie.cardenas@uide.edu.ec</em>
-                    </p>
-                    
-                    <div style="margin-top: 2em; font-size: 0.9em;">
-                        <p><strong>Próxima clase:</strong> Listas y Pilas</p>
+            <section data-background-color="#f8f8f8">
+                <h2>Conclusión</h2>
+                <div class="concept-box">
+                    <p>Las estructuras de datos son fundamentales para el desarrollo de software eficiente que permite:</p>
+                    <ul style="text-align: left;">
+                        <li>Organizar y manipular datos de manera eficiente</li>
+                        <li>Optimizar el rendimiento de algoritmos</li>
+                        <li>Elegir la representación adecuada según el contexto</li>
+                        <li>Desarrollar software escalable y mantenible</li>
+                    </ul>
+
+                    <div style="margin-top: 2em; text-align: center; color: var(--uide-primary);">
+                        <strong>¡Gracias por su atención!</strong>
                     </div>
                 </div>
             </section>
@@ -633,18 +899,33 @@
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/highlight/highlight.js"></script>
 
     <script>
-        // More info about initialization & config:
-        // - https://revealjs.com/initialization/
-        // - https://revealjs.com/config/
         Reveal.initialize({
             hash: true,
-            transition: 'convex',
+            transition: 'slide',
             transitionSpeed: 'default',
             backgroundTransition: 'fade',
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
 
-            // Learn about plugins: https://revealjs.com/plugins/
-            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+            // Navigation
+            controls: true,
+            progress: true,
+            center: true,
+            touch: true,
+            loop: false,
+
+            // Presentation size
+            width: 1024,
+            height: 768,
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 2.0
         });
+
+        // Simple Flashcard System
+        function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
+
     </script>
 
 </body>
