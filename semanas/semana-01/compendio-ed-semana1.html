@@ -17,80 +17,45 @@
     <!-- UIDE Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/uide-theme.css">
 
-    <!-- Custom Styles -->
+    <!-- Custom Timeline Styles -->
     <style>
-        /* Enhanced concept-box styling */
-        .concept-box {
-            background: rgba(255, 255, 255, 0.95);
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
+        /* Timeline Image Styles */
+        .timeline-image {
+            text-align: center;
         }
 
+        .timeline-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Enhanced concept-box for timeline */
         .concept-box h4 {
             display: flex;
             align-items: center;
             gap: 0.5rem;
             margin-bottom: 1rem;
-            color: var(--uide-primary);
-        }
-
-        .concept-box.warning {
-            border-left: 4px solid #ffc107;
-            background: rgba(255, 193, 7, 0.05);
-        }
-
-        .concept-box.info {
-            border-left: 4px solid var(--uide-secondary);
-            background: rgba(35, 53, 110, 0.05);
-        }
-
-        /* Definition box styling */
-        .definition-box {
-            background: rgba(233, 171, 33, 0.1);
-            border-left: 4px solid var(--uide-accent);
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-        }
-
-        /* Comparison table styling */
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-            font-size: 0.9em;
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            border: 1px solid #ddd;
-            padding: 0.8rem;
-            text-align: left;
-        }
-
-        .comparison-table th {
-            background: var(--uide-primary);
-            color: white;
-        }
-
-        .comparison-table tr:nth-child(even) {
-            background: rgba(233, 171, 33, 0.05);
         }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
+            .timeline-image img {
+                margin-bottom: 1rem;
+            }
+
             .r-hstack .column {
                 margin-bottom: 1rem;
             }
 
+            /* Stack columns vertically on mobile */
             .r-hstack {
                 flex-direction: column;
             }
 
+            /* Adjust text size for better readability */
             .concept-box {
                 padding: 1rem;
                 font-size: 0.9em;
@@ -100,53 +65,25 @@
                 font-size: 1.1em;
             }
 
-            .comparison-table {
-                font-size: 0.8em;
+            /* Timeline images responsive */
+            .timeline-image {
+                margin-bottom: 1.5rem;
             }
         }
 
-        /* Enhanced list styling */
-        .concept-box ul {
-            margin: 0.5rem 0;
-            padding-left: 1.5rem;
+        /* Improved timeline layout */
+        .timeline-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
 
-        .concept-box li {
-            margin-bottom: 0.3rem;
+        @media (max-width: 1024px) {
+            .timeline-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
-
-        /* Highlight styling */
-        mark {
-            background: rgba(233, 171, 33, 0.3);
-            padding: 0.1em 0.3em;
-            border-radius: 3px;
-        }
-
-        /* Big-O complexity styling */
-        .complexity-box {
-            background: linear-gradient(135deg, rgba(233, 171, 33, 0.1), rgba(35, 53, 110, 0.1));
-            border: 2px solid var(--uide-accent);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            text-align: center;
-        }
-
-        .complexity-item {
-            display: inline-block;
-            margin: 0.5rem;
-            padding: 0.8rem 1.2rem;
-            border-radius: 8px;
-            font-weight: bold;
-            color: white;
-        }
-
-        .o-1 { background: #28a745; }
-        .o-n { background: #ffc107; color: #333; }
-        .o-nlogn { background: #fd7e14; }
-        .o-n2 { background: #dc3545; }
-        .o-2n { background: #6f42c1; }
-        .o-nfact { background: #343a40; }
     </style>
 </head>
 
@@ -202,21 +139,21 @@
                             <div
                                 style="background: rgba(233, 171, 33, 0.2); padding: 1em; border-radius: 8px; border: 2px solid var(--uide-accent);">
                                 <strong>Fundamentos</strong><br>
-                                <small>Big-O, TDA, Representación en Memoria</small>
+                                <small>Big-O, TDA, representación en memoria</small>
                             </div>
                         </div>
                         <div class="column fragment">
                             <h4>Próximamente</h4>
                             <div style="background: rgba(145, 0, 72, 0.1); padding: 1em; border-radius: 8px;">
                                 <strong>Semana 2</strong><br>
-                                <small>Listas y Pilas</small>
+                                <small>Arrays vs listas, invariantes de TDAs</small>
                             </div>
                         </div>
                         <div class="column fragment">
                             <h4>Futuro</h4>
                             <div style="background: rgba(35, 53, 110, 0.1); padding: 1em; border-radius: 8px;">
                                 <strong>Unidad 2</strong><br>
-                                <small>Árboles y Grafos</small>
+                                <small>Estructura de datos lineales</small>
                             </div>
                         </div>
                     </div>
@@ -228,18 +165,18 @@
                         <div class="column">
                             <h4>Contenidos Principales</h4>
                             <ul>
-                                <li><mark>Notación Big-O</mark></li>
-                                <li><mark>Tipos de Datos Abstractos (TDA)</mark></li>
-                                <li><mark>Representación Estática vs Dinámica</mark></li>
-                                <li><mark>Complejidad Temporal y Espacial</mark></li>
+                                <li><mark>Notación Big-O (introducción)</mark></li>
+                                <li><mark>TDA (visión general)</mark></li>
+                                <li><mark>Representación en memoria</mark></li>
+                                <li><mark>Arreglo vs nodo/enlace</mark></li>
                             </ul>
                         </div>
                         <div class="column fragment">
                             <h4>Objetivos de Aprendizaje</h4>
                             <ul>
-                                <li><strong>Conceptual:</strong> Entender complejidad algorítmica</li>
-                                <li><strong>Práctico:</strong> Analizar eficiencia de algoritmos</li>
-                                <li><strong>Aplicativo:</strong> Elegir estructuras de datos apropiadas</li>
+                                <li><strong>Base conceptual:</strong> Explicar Big-O y TDA básicos</li>
+                                <li><strong>Análisis:</strong> Comprender complejidad algorítmica</li>
+                                <li><strong>Fundamentos:</strong> Preparación para estructuras avanzadas</li>
                             </ul>
                         </div>
                     </div>
@@ -248,84 +185,54 @@
 
             <!-- Notación Big-O -->
             <section data-transition="convex">
-                <h2>1. Notación Big-O (O Grande)</h2>
+                <h2>Notación Big-O</h2>
 
                 <section data-auto-animate>
-                    <h3>1.1 Definición y Propósito</h3>
+                    <h3>Definición Formal</h3>
                     <div class="concept-box">
-                        <div class="definition-box">
-                            <p>La <strong>notación Big-O</strong> es una representación matemática que describe cómo crece la complejidad de un algoritmo en función del tamaño de la entrada, generalmente denotado como "n".</p>
-                        </div>
-
-                        <div class="fragment">
-                            <h4><i class="fas fa-target"></i> Propósito Principal</h4>
-                            <p>Proveer una visión clara de cómo se comportará el algoritmo en el <mark>"peor de los casos"</mark>, es decir, en el escenario que exige la mayor cantidad de operaciones.</p>
-                        </div>
+                        <blockquote>
+                            <p><strong>"La notación Big-O es una representación matemática que describe cómo crece la complejidad de un algoritmo en función del tamaño de la entrada, generalmente denotado como 'n'."</strong></p>
+                            <footer style="margin-top: 1em; color: var(--uide-secondary);">
+                                — Análisis de Algoritmos
+                            </footer>
+                        </blockquote>
                     </div>
                 </section>
 
                 <section data-auto-animate>
-                    <h3>1.2 Tipos de Complejidad Asintótica</h3>
-                    <div class="complexity-box">
-                        <h4>Complejidades Principales</h4>
-                        <div style="margin: 1rem 0;">
-                            <span class="complexity-item o-1">O(1) - Constante</span>
-                            <span class="complexity-item o-n">O(n) - Lineal</span>
-                            <span class="complexity-item o-nlogn">O(n log n) - Logarítmica</span>
-                        </div>
-                        <div style="margin: 1rem 0;">
-                            <span class="complexity-item o-n2">O(n²) - Cuadrática</span>
-                            <span class="complexity-item o-2n">O(2ⁿ) - Exponencial</span>
-                            <span class="complexity-item o-nfact">O(n!) - Factorial</span>
-                        </div>
+                    <h3>Propósito Principal</h3>
+                    <div class="concept-box">
+                        <p>La notación Big-O es <mark>fundamental para programadores</mark> porque:</p>
+                        <ul class="fragment">
+                            <li><strong>Predice el rendimiento</strong> de algoritmos en el peor caso</li>
+                            <li><strong>Permite comparar</strong> eficiencia entre diferentes soluciones</li>
+                            <li><strong>Garantiza escalabilidad</strong> de sistemas computacionales</li>
+                        </ul>
                     </div>
+                    <p class="fragment"><em>Héctor de León (s.f.)</em></p>
                 </section>
 
                 <section data-auto-animate>
-                    <h3>1.3 Características de Cada Complejidad</h3>
-                    <div class="concept-box">
-                        <div class="r-vstack">
-                            <div class="fragment" style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-rocket"></i> O(1) - Constante</h5>
-                                <p>El tiempo de ejecución no cambia con el tamaño de la entrada. <strong>Ejemplo:</strong> Acceso directo a un elemento de un arreglo.</p>
+                    <h3>Tipos de Complejidad</h3>
+                    <div class="r-hstack">
+                        <div class="column fragment">
+                            <div class="concept-box">
+                                <h4>O(1) - Constante</h4>
+                                <p>Tiempo <strong>independiente</strong> del tamaño</p>
                             </div>
-
-                            <div class="fragment" style="background: rgba(255, 193, 7, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-chart-line"></i> O(n) - Lineal</h5>
-                                <p>El tiempo de ejecución crecerá proporcionalmente al tamaño de la entrada. <strong>Ejemplo:</strong> Búsqueda secuencial en una lista.</p>
-                            </div>
-
-                            <div class="fragment" style="background: rgba(220, 53, 69, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-chart-area"></i> O(n²) - Cuadrática</h5>
-                                <p>Un aumento en la entrada resultará en un crecimiento cuadrático en el tiempo. <strong>Ejemplo:</strong> Algoritmos de ordenamiento básicos.</p>
+                            <div class="concept-box">
+                                <h4>O(n) - Lineal</h4>
+                                <p>Crecimiento <strong>proporcional</strong> a la entrada</p>
                             </div>
                         </div>
-                    </div>
-                </section>
-
-                <section data-auto-animate>
-                    <h3>1.4 Importancia en la Programación</h3>
-                    <div class="concept-box">
-                        <div class="r-hstack">
-                            <div class="column fragment">
-                                <div style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
-                                    <h5><i class="fas fa-code"></i> Para Programadores</h5>
-                                    <ul>
-                                        <li>Optimización de códigos</li>
-                                        <li>Garantizar escalabilidad</li>
-                                        <li>Mejorar eficiencia</li>
-                                    </ul>
-                                </div>
+                        <div class="column fragment">
+                            <div class="concept-box">
+                                <h4>O(n²) - Cuadrática</h4>
+                                <p>Crecimiento <strong>cuadrático</strong> con la entrada</p>
                             </div>
-                            <div class="column fragment">
-                                <div style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px;">
-                                    <h5><i class="fas fa-chart-bar"></i> Medición</h5>
-                                    <ul>
-                                        <li>Complejidad temporal</li>
-                                        <li>Complejidad espacial</li>
-                                        <li>Rendimiento del algoritmo</li>
-                                    </ul>
-                                </div>
+                            <div class="concept-box">
+                                <h4>O(log n) - Logarítmica</h4>
+                                <p>Crecimiento <strong>logarítmico</strong> eficiente</p>
                             </div>
                         </div>
                     </div>
@@ -333,275 +240,270 @@
             </section>
 
             <!-- Tipos de Datos Abstractos -->
-            <section data-transition="convex">
-                <h2>2. Tipos de Datos Abstractos (TDA)</h2>
+            <section>
+                <h2>Tipos de Datos Abstractos (TDA)</h2>
 
-                <section data-auto-animate>
-                    <h3>2.1 Definición y Concepto</h3>
+                <section>
+                    <h3>Concepto Fundamental</h3>
                     <div class="concept-box">
-                        <div class="definition-box">
-                            <p>Un <strong>Tipo de Dato Abstracto (TDA)</strong> es un modelo matemático que se define en términos de un conjunto de datos u objetos al cual se le asocian una serie de operaciones.</p>
-                        </div>
-
-                        <div class="fragment">
-                            <h4><i class="fas fa-eye"></i> Abstracción</h4>
-                            <p>El TDA provee una <mark>interfaz</mark> que permite realizar las operaciones permitidas, abstraiéndose de la manera en que dichas operaciones están implementadas.</p>
-                        </div>
+                        <p><strong>Campos (2022):</strong> <em>"La diferencia estriba en el énfasis que se pretende dar a la especificación formal de los tipos como herramienta fundamental para el diseño modular de programas"</em></p>
                     </div>
                 </section>
 
                 <section data-auto-animate>
-                    <h3>2.2 Separación Interfaz-Implementación</h3>
-                    <div class="concept-box">
-                        <div class="r-hstack">
-                            <div class="column fragment">
-                                <div style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
-                                    <h5><i class="fas fa-desktop"></i> Interfaz (Qué hace)</h5>
-                                    <ul>
-                                        <li>Define operaciones</li>
-                                        <li>Especifica comportamiento</li>
-                                        <li>Establece contratos</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="column fragment">
-                                <div style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
-                                    <h5><i class="fas fa-cogs"></i> Implementación (Cómo lo hace)</h5>
-                                    <ul>
-                                        <li>Estructura de datos</li>
-                                        <li>Algoritmos específicos</li>
-                                        <li>Detalles internos</li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <h3>Definición</h3>
+                    <div class="timeline-item" style="display: flex; align-items: center; gap: 3rem; padding: 1.5rem; border-left: 4px solid var(--uide-primary);">
+                        <div style="flex-shrink: 0;">
+                            <img src="../../assets/images/semana-1/tda-concepto.png" alt="Concepto de TDA mostrando abstracción" 
+                                 style="width: 250px; height: 160px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 20px rgba(145, 0, 72, 0.3);" 
+                                 class="fragment" />
                         </div>
-
-                        <div class="fragment definition-box" style="margin-top: 1rem;">
-                            <p><strong>Ventaja clave:</strong> Una misma TDA puede ser implementada utilizando distintas estructuras de datos, manteniendo la misma funcionalidad.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section data-auto-animate>
-                    <h3>2.3 Ejemplos de TDA Fundamentales</h3>
-                    <div class="concept-box">
-                        <p>Muchos de los TADs más importantes son <mark>contenedores de datos</mark>, es decir, agregaciones de múltiples datos en una unidad conceptual:</p>
-
-                        <div class="r-vstack" style="margin-top: 1rem;">
-                            <div class="fragment" style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-list"></i> Listas</h5>
-                                <p>Colecciones secuenciales de elementos</p>
-                            </div>
-
-                            <div class="fragment" style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-layer-group"></i> Pilas (Stack)</h5>
-                                <p>Colecciones que siguen la propiedad <strong>LIFO</strong> (Last In, First Out)</p>
-                            </div>
-
-                            <div class="fragment" style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-arrow-right"></i> Colas (Queue)</h5>
-                                <p>Colecciones que siguen la propiedad <strong>FIFO</strong> (First In, First Out)</p>
-                            </div>
-
-                            <div class="fragment" style="background: rgba(145, 0, 72, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-sitemap"></i> Árboles</h5>
-                                <p>Tipos arborescentes que representan colecciones de datos en una jerarquía</p>
+                        <div style="flex: 1;">
+                            <div class="fragment">
+                                <p style="color: #333; text-align: left; line-height: 1.4; margin-bottom: 0.5rem; font-size: 1.1em;">
+                                    <strong>Modelo matemático</strong> definido por un conjunto de datos y operaciones asociadas.
+                                </p>
+                                <small style="color: var(--uide-secondary); font-style: italic;">Abstracción de datos y operaciones</small>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <section data-auto-animate>
-                    <h3>2.4 Implementación del TDA</h3>
-                    <div class="concept-box">
-                        <h4><i class="fas fa-tools"></i> Proceso de Implementación</h4>
-                        <div class="r-vstack">
-                            <div class="fragment" style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5>1. Encontrar una Estructura de Datos (ED) adecuada</h5>
-                                <p>Para representar el modelo subyacente</p>
-                            </div>
-
-                            <div class="fragment" style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5>2. Escribir procedimientos o funciones</h5>
-                                <p>Que cumplirán con las tareas definidas por las operaciones</p>
+                    <h3>Separación Interfaz-Implementación</h3>
+                    <div class="timeline-item" style="display: flex; align-items: center; gap: 3rem; padding: 1.5rem; border-left: 4px solid var(--uide-secondary);">
+                        <div style="flex: 1;">
+                            <div class="fragment">
+                                <p style="color: #333; text-align: left; line-height: 1.4; margin-bottom: 0.5rem; font-size: 1.1em;">
+                                    <strong>Interfaz (qué hace):</strong> Define operaciones y comportamiento
+                                </p>
+                                <p style="color: #333; text-align: left; line-height: 1.4; margin-bottom: 0.5rem; font-size: 1.1em;">
+                                    <strong>Implementación (cómo lo hace):</strong> Estructura de datos específica
+                                </p>
+                                <small style="color: var(--uide-secondary); font-style: italic;">Encapsulamiento y modularidad</small>
                             </div>
                         </div>
+                        <div style="flex-shrink: 0;">
+                            <img src="../../assets/images/semana-1/interfaz-implementacion.png" alt="Separación entre interfaz e implementación" 
+                                 style="width: 250px; height: 160px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 20px rgba(35, 53, 110, 0.3);" 
+                                 class="fragment" />
+                        </div>
+                    </div>
+                </section>
 
-                        <div class="fragment definition-box" style="margin-top: 1rem;">
-                            <p><strong>Paradigma OOP:</strong> El paradigma de orientación a objetos facilita esto mediante el encapsulamiento de datos y operaciones a través de clases e interfaces, ocultando los detalles de implementación.</p>
+                <section data-auto-animate>
+                    <h3>Ejemplos de TDA</h3>
+                    <div class="timeline-item" style="display: flex; align-items: center; gap: 3rem; padding: 1.5rem; border-left: 4px solid var(--uide-accent);">
+                        <div style="flex-shrink: 0;">
+                            <img src="../../assets/images/semana-1/ejemplos-tda.png" alt="Ejemplos de TDA: Listas, Pilas, Colas, Árboles" 
+                                 style="width: 250px; height: 160px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 20px rgba(233, 171, 33, 0.4);" 
+                                 class="fragment" />
+                        </div>
+                        <div style="flex: 1;">
+                            <div class="fragment">
+                                <p style="color: #333; text-align: left; line-height: 1.4; margin-bottom: 0.5rem; font-size: 1.1em;">
+                                    <strong>Contenedores de datos:</strong> agregaciones de múltiples datos
+                                </p>
+                                <ul style="color: var(--uide-secondary); margin: 0.5rem 0; padding-left: 1.2rem;">
+                                    <li>Listas (secuenciales)</li>
+                                    <li>Pilas (LIFO)</li>
+                                    <li>Colas (FIFO)</li>
+                                    <li>Árboles (jerárquicos)</li>
+                                </ul>
+                                <small style="color: var(--uide-secondary); font-style: italic;">Estructuras fundamentales en programación</small>
+                            </div>
                         </div>
                     </div>
                 </section>
             </section>
 
             <!-- Representación en Memoria -->
-            <section data-transition="convex">
-                <h2>3. Representación en Memoria</h2>
+            <section>
+                <h2>Representación en Memoria</h2>
 
                 <section data-auto-animate>
-                    <h3>3.1 Clasificación General</h3>
-                    <div class="concept-box">
-                        <p>Las estructuras de datos se pueden clasificar, según su organización en memoria, en dos categorías principales:</p>
-
-                        <div class="r-hstack" style="margin-top: 2rem;">
-                            <div class="column fragment">
-                                <div style="background: rgba(40, 167, 69, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center;">
-                                    <h4><i class="fas fa-th"></i> Estática</h4>
-                                    <p><strong>Arreglos/Vectores</strong></p>
-                                    <small>Memoria contigua</small>
-                                </div>
-                            </div>
-                            <div class="column fragment">
-                                <div style="background: rgba(35, 53, 110, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center;">
-                                    <h4><i class="fas fa-project-diagram"></i> Dinámica</h4>
-                                    <p><strong>Nodos/Enlaces</strong></p>
-                                    <small>Punteros</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="fragment definition-box" style="margin-top: 1rem;">
-                            <p>Esta elección tiene <mark>implicaciones directas</mark> en el coste temporal (Big-O) y espacial de las operaciones.</p>
-                        </div>
+                    <h3>Clasificación Principal</h3>
+                    <div data-id="memory-title">
+                        <p><strong>Dos enfoques fundamentales</strong> para organizar datos en memoria:</p>
                     </div>
-                </section>
-
-                <section data-auto-animate>
-                    <h3>3.2 Representación Estática (Arreglo/Vector)</h3>
-                    <div class="concept-box">
-                        <div class="definition-box">
-                            <p>La representación estática implica que el <strong>espacio de almacenamiento se conoce en tiempo de compilación</strong> y se mantiene reservado durante la ejecución.</p>
-                        </div>
-
-                        <h4><i class="fas fa-list-ul"></i> Características Principales</h4>
-                        <div class="r-vstack">
-                            <div class="fragment" style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-arrows-alt-h"></i> Contigüidad</h5>
-                                <p>Los elementos se almacenan en ubicaciones de memoria contiguas</p>
+                    <div class="concept-box fragment">
+                        <div class="r-hstack">
+                            <div class="column">
+                                <h4>Estática (Arreglos)</h4>
+                                <p>Memoria contigua, tamaño fijo</p>
                             </div>
-
-                            <div class="fragment" style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-bolt"></i> Acceso Directo</h5>
-                                <p>Permite representación de acceso directo con coste <strong>O(1)</strong> para insertar, modificar, obtener y borrar</p>
-                            </div>
-
-                            <div class="fragment" style="background: rgba(220, 53, 69, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-exclamation-triangle"></i> Limitación</h5>
-                                <p>Redimensionar requiere copiar todos los n elementos → <strong>O(n)</strong></p>
+                            <div class="column">
+                                <h4>Dinámica (Enlaces)</h4>
+                                <p>Punteros, tamaño variable</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <section data-auto-animate>
-                    <h3>3.3 Representación Dinámica (Nodo/Enlace)</h3>
-                    <div class="concept-box">
-                        <div class="definition-box">
-                            <p>La representación dinámica permite que el <strong>espacio de almacenamiento se obtenga durante la ejecución</strong>, a medida que se necesita.</p>
-                        </div>
-
-                        <h4><i class="fas fa-list-ul"></i> Características Principales</h4>
-                        <div class="r-vstack">
-                            <div class="fragment" style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-link"></i> Nodos y Punteros</h5>
-                                <p>Se usa memoria dinámica con punteros que direccionan células en la memoria</p>
-                            </div>
-
-                            <div class="fragment" style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-expand-arrows-alt"></i> Estructura Dinámica</h5>
-                                <p>La cantidad máxima de memoria ocupada no se conoce hasta que finaliza la ejecución</p>
-                            </div>
-
-                            <div class="fragment" style="background: rgba(145, 0, 72, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-clock"></i> Coste en Tiempo</h5>
-                                <p>Operaciones como añadir, buscar y borrar generalmente tienen coste <strong>O(n)</strong> en el peor caso</p>
-                            </div>
-                        </div>
+                    <h3>Impacto en Complejidad</h3>
+                    <div data-id="memory-title" style="font-size: 0.8em;">
+                        <p><strong>La elección afecta directamente:</strong></p>
                     </div>
-                </section>
-
-                <section data-auto-animate>
-                    <h3>3.4 Comparación: Arreglo vs. Enlace</h3>
-                    <div class="concept-box">
-                        <table class="comparison-table">
-                            <thead>
-                                <tr>
-                                    <th>Aspecto</th>
-                                    <th>Arreglo/Vector</th>
-                                    <th>Lista Enlazada</th>
-                                    <th>Árbol AVL</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="fragment">
-                                    <td><strong>Coste en Espacio</strong></td>
-                                    <td>O(MAX) - Fijo</td>
-                                    <td>O(n) - Dinámico</td>
-                                    <td>O(n)</td>
-                                </tr>
-                                <tr class="fragment">
-                                    <td><strong>Coste en Tiempo</strong></td>
-                                    <td>O(1)</td>
-                                    <td>O(n)</td>
-                                    <td>O(log n)</td>
-                                </tr>
-                                <tr class="fragment">
-                                    <td><strong>Flexibilidad</strong></td>
-                                    <td>Menos flexible</td>
-                                    <td>Más flexible</td>
-                                    <td>Excelente balance</td>
-                                </tr>
-                                <tr class="fragment">
-                                    <td><strong>Redimensionamiento</strong></td>
-                                    <td>Costoso O(n)</td>
-                                    <td>No necesario</td>
-                                    <td>Automático</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <section data-auto-animate>
-                    <h3>3.5 Ventajas y Desventajas</h3>
                     <div class="concept-box">
                         <div class="r-hstack">
                             <div class="column">
-                                <h4><i class="fas fa-th"></i> Representación Estática</h4>
-                                <div style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px; margin-bottom: 0.5rem;">
-                                    <h5>✅ Ventajas</h5>
-                                    <ul>
-                                        <li>Acceso directo O(1)</li>
-                                        <li>Menor overhead de memoria</li>
-                                        <li>Mejor localidad de referencia</li>
-                                    </ul>
+                                <h4>Coste Temporal</h4>
+                                <p>Arreglo: O(1) acceso<br>Lista: O(n) búsqueda</p>
+                            </div>
+                            <div class="column">
+                                <h4>Coste Espacial</h4>
+                                <p>Arreglo: O(MAX)<br>Lista: O(n) dinámico</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-auto-animate>
+                    <h3>Comparación Práctica</h3>
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="../../assets/images/semana-1/array-vs-lista.png" alt="Comparación visual entre arreglos contiguos y listas enlazadas mostrando diferencias en acceso y memoria" 
+                             style="width: 85%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); margin-bottom: 1rem;" 
+                             class="fragment" />
+                        <p style="font-size: 0.9em; color: var(--uide-secondary); font-style: italic;" class="fragment">
+                            Arreglo contiguo vs Lista enlazada: acceso y organización en memoria
+                        </p>
+                    </div>
+                </section>
+
+                <section data-auto-animate>
+                    <h3>Criterios de Selección</h3>
+                    <div class="r-vstack">
+                        <div class="concept-box fragment">
+                            <h4>Usar Arreglos cuando:</h4>
+                            <p>Acceso frecuente por índice, tamaño conocido</p>
+                        </div>
+                        <div class="concept-box fragment">
+                            <h4>Usar Listas cuando:</h4>
+                            <p>Tamaño variable, inserciones/eliminaciones frecuentes</p>
+                        </div>
+                        <div class="concept-box fragment">
+                            <h4>Considerar híbridos:</h4>
+                            <p>Árboles balanceados para O(log n) equilibrado</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Conceptos Clave - Flashcards Interactivas -->
+            <section>
+                <h2>Conceptos Clave - Flashcards Interactivas</h2>
+                <section>
+                    <div class="flashcards-grid">
+                        <!-- Card 1 -->
+                        <div class="flashcard" onclick="flipCard(this)">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <i class="fas fa-chart-line" style="font-size: 2em; margin-bottom: 0.5rem; color: var(--uide-primary);"></i>
+                                    <h4>Notación Big-O</h4>
+                                    <p>¿Qué describe la notación Big-O y cuál es su propósito principal?</p>
                                 </div>
-                                <div style="background: rgba(220, 53, 69, 0.1); padding: 1rem; border-radius: 8px;">
-                                    <h5>❌ Desventajas</h5>
-                                    <ul>
-                                        <li>Tamaño fijo</li>
-                                        <li>Redimensionamiento costoso</li>
-                                        <li>Posible desperdicio de memoria</li>
-                                    </ul>
+                                <div class="flashcard-back">
+                                    <i class="fas fa-rocket" style="font-size: 2em; margin-bottom: 0.5rem; color: var(--uide-secondary);"></i>
+                                    <h4>Complejidad Algorítmica</h4>
+                                    <p>Describe cómo <strong>crece la complejidad</strong> de un algoritmo en función del tamaño de entrada. Su propósito es <strong>predecir el rendimiento</strong> en el peor caso y garantizar escalabilidad.</p>
+                                    <small>Fundamental para optimización de códigos</small>
                                 </div>
                             </div>
-                            <div class="column fragment">
-                                <h4><i class="fas fa-project-diagram"></i> Representación Dinámica</h4>
-                                <div style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px; margin-bottom: 0.5rem;">
-                                    <h5>✅ Ventajas</h5>
-                                    <ul>
-                                        <li>Tamaño flexible</li>
-                                        <li>Uso eficiente de memoria</li>
-                                        <li>No limitación de cardinal máximo</li>
-                                    </ul>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="flashcard" onclick="flipCard(this)">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <i class="fas fa-layer-group" style="font-size: 2em; margin-bottom: 0.5rem; color: var(--uide-primary);"></i>
+                                    <h4>Tipos de Datos Abstractos</h4>
+                                    <p>¿Qué es un TDA y cuál es la ventaja de separar interfaz e implementación?</p>
                                 </div>
-                                <div style="background: rgba(220, 53, 69, 0.1); padding: 1rem; border-radius: 8px;">
-                                    <h5>❌ Desventajas</h5>
-                                    <ul>
-                                        <li>Acceso secuencial O(n)</li>
-                                        <li>Overhead de punteros</li>
-                                        <li>Fragmentación de memoria</li>
-                                    </ul>
+                                <div class="flashcard-back">
+                                    <i class="fas fa-cube" style="font-size: 2em; margin-bottom: 0.5rem; color: var(--uide-secondary);"></i>
+                                    <h4>Modelo Matemático</h4>
+                                    <p><strong>TDA:</strong> modelo definido por datos y operaciones. <strong>Ventaja:</strong> una misma interfaz puede tener múltiples implementaciones, permitiendo flexibilidad y reutilización.</p>
+                                    <small>Encapsulamiento y modularidad</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flashcards-grid">
+                        <!-- Card 3 -->
+                        <div class="flashcard" onclick="flipCard(this)">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <i class="fas fa-memory" style="font-size: 2em; margin-bottom: 0.5rem; color: var(--uide-primary);"></i>
+                                    <h4>Representación en Memoria</h4>
+                                    <p>¿Cuáles son las dos formas principales de organizar datos en memoria?</p>
+                                </div>
+                                <div class="flashcard-back">
+                                    <i class="fas fa-project-diagram" style="font-size: 2em; margin-bottom: 0.5rem; color: var(--uide-secondary);"></i>
+                                    <h4>Estática vs Dinámica</h4>
+                                    <p><strong>Estática (Arreglos):</strong> memoria contigua, acceso O(1). <strong>Dinámica (Enlaces):</strong> punteros, tamaño flexible, acceso O(n).</p>
+                                    <small>Impacta directamente en rendimiento</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="flashcard" onclick="flipCard(this)">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <i class="fas fa-balance-scale" style="font-size: 2em; margin-bottom: 0.5rem; color: var(--uide-primary);"></i>
+                                    <h4>Complejidades Principales</h4>
+                                    <p>¿Cuáles son las complejidades más comunes y sus características?</p>
+                                    <small>Clic para ver respuesta</small>
+                                </div>
+                                <div class="flashcard-back">
+                                    <i class="fas fa-chart-bar" style="font-size: 2em; margin-bottom: 0.5rem; color: var(--uide-secondary);"></i>
+                                    <h4>O(1), O(n), O(n²), O(log n)</h4>
+                                    <p><strong>O(1):</strong> constante, <strong>O(n):</strong> lineal, <strong>O(n²):</strong> cuadrática, <strong>O(log n):</strong> logarítmica eficiente.</p>
+                                    <small>De mejor a peor rendimiento general</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flashcards-grid">
+                        <!-- Card 5 -->
+                        <div class="flashcard" onclick="flipCard(this)">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <i class="fas fa-list" style="font-size: 2em; margin-bottom: 0.5rem; color: var(--uide-primary);"></i>
+                                    <h4>Ejemplos de TDA</h4>
+                                    <p>¿Cuáles son los TDA fundamentales y sus características?</p>
+                                    <small>Clic para ver respuesta</small>
+                                </div>
+                                <div class="flashcard-back">
+                                    <i class="fas fa-sitemap" style="font-size: 2em; margin-bottom: 0.5rem; color: var(--uide-secondary);"></i>
+                                    <h4>Listas, Pilas, Colas, Árboles</h4>
+                                    <p><strong>Listas:</strong> secuenciales, <strong>Pilas:</strong> LIFO (Last In, First Out), <strong>Colas:</strong> FIFO (First In, First Out), <strong>Árboles:</strong> jerárquicos.</p>
+                                    <small>Contenedores fundamentales de datos</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="flashcard" onclick="flipCard(this)">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <i class="fas fa-tools" style="font-size: 2em; margin-bottom: 0.5rem; color: var(--uide-primary);"></i>
+                                    <h4>Criterios de Selección</h4>
+                                    <p>¿Cuándo usar arreglos vs listas enlazadas?</p>
+                                    <small>Clic para ver respuesta</small>
+                                </div>
+                                <div class="flashcard-back">
+                                    <i class="fas fa-decision" style="font-size: 2em; margin-bottom: 0.5rem; color: var(--uide-secondary);"></i>
+                                    <h4>Según Necesidades</h4>
+                                    <p><strong>Arreglos:</strong> acceso frecuente por índice, tamaño conocido. <strong>Listas:</strong> tamaño variable, inserciones/eliminaciones frecuentes.</p>
+                                    <small>Elegir según patrón de uso</small>
                                 </div>
                             </div>
                         </div>
@@ -609,76 +511,81 @@
                 </section>
             </section>
 
-            <!-- Conclusiones y Síntesis -->
-            <section data-transition="convex">
-                <h2>4. Síntesis y Conclusiones</h2>
+            <!-- Graded Activities -->
+            <section data-background-color="#f8f8f8" data-transition="convex">
+                <h2>Actividades Calificadas - Semana 1</h2>
 
                 <section>
-                    <h3>4.1 Conceptos Clave Aprendidos</h3>
-                    <div class="concept-box">
-                        <div class="r-vstack">
-                            <div class="fragment" style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-chart-line"></i> Notación Big-O</h5>
-                                <p>Herramienta fundamental para <mark>analizar y comparar</mark> la eficiencia de algoritmos y estructuras de datos</p>
+                    <h3>Prácticas Experimentales</h3>
+                    <div class="r-hstack">
+                        <div class="column">
+                            <div class="concept-box">
+                                <h4 style="color: var(--uide-primary);">PE-1.1: Diagrama de Memoria</h4>
+                                <p><strong>Actividad:</strong> Crear diagrama comparativo</p>
+                                <p><strong>Enfoque:</strong> Arreglo contiguo vs nodos/enlaces</p>
+                                <ul style="text-align: left;">
+                                    <li>Representación visual de memoria</li>
+                                    <li>Diferencias en acceso</li>
+                                    <li>Ventajas y desventajas</li>
+                                </ul>
+                                <p><strong>Valor:</strong> 2.25 puntos</p>
                             </div>
-
-                            <div class="fragment" style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-cube"></i> Tipos de Datos Abstractos</h5>
-                                <p>Separación clara entre <mark>interfaz e implementación</mark>, permitiendo flexibilidad y reutilización</p>
-                            </div>
-
-                            <div class="fragment" style="background: rgba(145, 0, 72, 0.1); padding: 1rem; border-radius: 8px;">
-                                <h5><i class="fas fa-memory"></i> Representación en Memoria</h5>
-                                <p>La elección entre estática y dinámica impacta directamente en <mark>rendimiento y flexibilidad</mark></p>
+                        </div>
+                        <div class="column fragment">
+                            <div class="concept-box">
+                                <h4 style="color: var(--uide-secondary);">Resultado de Aprendizaje</h4>
+                                <p><strong>Objetivo:</strong> Explicar Big-O y TDA básicos</p>
+                                <p><strong>Competencia:</strong> Cultura digital - utilizar herramientas de desarrollo para evaluar estructuras</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <section>
-                    <h3>4.2 Aplicación Práctica</h3>
+                    <h3>Trabajo Autónomo</h3>
+                    <div class="r-hstack">
+                        <div class="column">
+                            <div class="concept-box">
+                                <h4 style="color: var(--uide-primary);">TA-1.1: Ficha de TDA</h4>
+                                <p><strong>Actividad:</strong> Documentar un TDA completo</p>
+                                <p><strong>Enfoque:</strong> Operaciones, pre/post condiciones y costes</p>
+                                <ul style="text-align: left;">
+                                    <li>Especificación formal</li>
+                                    <li>Análisis de complejidad</li>
+                                    <li>Casos de uso</li>
+                                </ul>
+                                <p><strong>Valor:</strong> 2.25 puntos</p>
+                            </div>
+                        </div>
+                        <div class="column fragment">
+                            <div class="concept-box">
+                                <h4 style="color: var(--uide-secondary);">Competencia Desarrollada</h4>
+                                <p><strong>Comunicación efectiva:</strong> Documentar y comunicar soluciones técnicas de manera clara y profesional</p>
+                                <p><strong>Formato:</strong> Ficha técnica de 1 página</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Herramientas de Apoyo</h3>
                     <div class="concept-box">
-                        <h4><i class="fas fa-lightbulb"></i> Criterios de Selección</h4>
+                        <h4 style="color: var(--uide-accent);">Recursos Disponibles</h4>
                         <div class="r-hstack">
-                            <div class="column fragment">
-                                <div style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
-                                    <h5>Usar Arreglos cuando:</h5>
-                                    <ul>
-                                        <li>Acceso frecuente por índice</li>
-                                        <li>Tamaño conocido y fijo</li>
-                                        <li>Rendimiento crítico</li>
-                                    </ul>
-                                </div>
+                            <div class="column">
+                                <ul style="text-align: left;">
+                                    <li><strong>NotebookLM:</strong> Análisis de contenido</li>
+                                    <li><strong>Recursos Bibliográficos:</strong> Material de referencia</li>
+                                    <li><strong>Podcasts:</strong> Contenido auditivo</li>
+                                </ul>
                             </div>
-                            <div class="column fragment">
-                                <div style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
-                                    <h5>Usar Listas Enlazadas cuando:</h5>
-                                    <ul>
-                                        <li>Tamaño variable</li>
-                                        <li>Inserciones/eliminaciones frecuentes</li>
-                                        <li>Memoria limitada</li>
-                                    </ul>
-                                </div>
+                            <div class="column">
+                                <ul style="text-align: left;">
+                                    <li><strong>Casos de estudio:</strong> Ejemplos prácticos</li>
+                                    <li><strong>Ejercicios prácticos:</strong> Aplicación directa</li>
+                                    <li><strong>Tarjetas didácticas:</strong> Repaso conceptual</li>
+                                </ul>
                             </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h3>4.3 Próximos Pasos</h3>
-                    <div class="concept-box">
-                        <div class="definition-box">
-                            <h4><i class="fas fa-road"></i> Preparación para Semana 2</h4>
-                            <p>Con estos fundamentos sólidos, estamos preparados para explorar implementaciones específicas de <strong>Listas y Pilas</strong>, aplicando los conceptos de TDA y análisis de complejidad.</p>
-                        </div>
-
-                        <div class="fragment" style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                            <h5><i class="fas fa-tasks"></i> Temas por venir:</h5>
-                            <ul>
-                                <li>Implementación de Listas (estática y dinámica)</li>
-                                <li>Operaciones en Pilas (push, pop, top)</li>
-                                <li>Aplicaciones prácticas de estas estructuras</li>
-                            </ul>
                         </div>
                     </div>
                 </section>
@@ -687,14 +594,13 @@
             <!-- Referencias -->
             <section data-background-color="#f8f8f8">
                 <h2>Referencias Bibliográficas</h2>
-                <div style="font-size: 0.8em; text-align: left; max-width: 900px; margin: 0 auto;">
-                    <ul>
-                        <li>Alves, S. (2024). Complejidad algorítmica: Notación Big-O. Alveritmos.</li>
-                        <li>Campos, J. (2022). Apuntes de Estructuras de Datos y Algoritmos (2a ed., v. 4). Universidad de Zaragoza.</li>
-                        <li>De León, H. (2024). Notación Big O Explicado con Código. YouTube.</li>
-                        <li>Señas, P., & Martig, S. (2005). Estructuras de Datos y Algoritmos: Módulo I Tipos de datos, estructuras de datos y tipos de datos abstractos.</li>
-                        <li>Corporación Universitaria Remington. Estructuras de Datos. (Obra bajo licencia Creative Commons).</li>
-                    </ul>
+                <div class="references-container">
+                    <p>Alves, S. (2024, 29 de octubre). Complejidad algorítmica: Notación Big-O. Alveritmos.</p>
+                    <p>Campos, J. (2022). Apuntes de Estructuras de Datos y Algoritmos (2a ed., v. 4). Departamento de Informática e Ingeniería de Sistemas, Universidad de Zaragoza.</p>
+                    <p>Corporación Universitaria Remington. (s.f.). Estructuras de Datos. (Obra publicada bajo licencia Creative Commons).</p>
+                    <p>De León, H. [@hdeleonnet]. (2024, 18 de abril). Notación Big O Explicado con Código [Video]. YouTube.</p>
+                    <p>Señas, P., & Martig, S. (2005). Estructuras de Datos y Algoritmos: Módulo I Tipos de datos, estructuras de datos y tipos de datos abstractos.</p>
+                    <p>Villca Gutierrez, C. F. (Traductor). (2024, 1 de febrero). Guía: Notación Big O - Gráfico de complejidad de tiempo. freeCodeCamp.</p>
                 </div>
             </section>
 
@@ -736,6 +642,11 @@
             // Learn about plugins: https://revealjs.com/plugins/
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
+
+        // Simple Flashcard System
+        function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
     </script>
 
 </body>
