@@ -125,72 +125,6 @@
         .comparison-table tr:nth-child(even) {
             background-color: #f9f9f9;
         }
-
-        /* Flashcards styling */
-        .flashcards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .flashcard {
-            perspective: 1000px;
-            height: 200px;
-            cursor: pointer;
-        }
-
-        .flashcard-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-
-        .flashcard.flipped .flashcard-inner {
-            transform: rotateY(180deg);
-        }
-
-        .flashcard-front, .flashcard-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 12px;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .flashcard-front {
-            background: linear-gradient(135deg, var(--uide-primary), var(--uide-secondary));
-            color: white;
-        }
-
-        .flashcard-back {
-            background: rgba(255, 255, 255, 0.95);
-            color: var(--uide-primary);
-            transform: rotateY(180deg);
-            border: 2px solid var(--uide-accent);
-        }
-
-        .flashcard h4 {
-            margin-bottom: 1rem;
-            font-size: 1.2em;
-        }
-
-        .flashcard p {
-            margin: 0.5rem 0;
-        }
-
-        .flashcard small {
-            margin-top: auto;
-            opacity: 0.8;
-        }
     </style>
 </head>
 
@@ -227,7 +161,8 @@
             <!-- Quote Slide -->
             <section data-background-color="#f8f8f8">
                 <blockquote style="font-size: 1.2em; text-align: center;">
-                    <p><strong>"La complejidad algorítmica es un tema que los programadores deben abordar en su vida laboral cuando necesitan optimizar códigos."</strong></p>
+                    <p><strong>"La complejidad algorítmica es un tema que los programadores deben abordar en su vida
+                            laboral cuando necesitan optimizar códigos."</strong></p>
                     <footer style="margin-top: 1em; color: var(--uide-secondary);">
                         — Héctor de León
                     </footer>
@@ -297,11 +232,14 @@
                 <section data-auto-animate>
                     <h3>1.1 Definición y Propósito</h3>
                     <div class="concept-box">
-                        <p>La <mark>complejidad algorítmica</mark> es un concepto fundamental en el análisis de algoritmos, diseñado para pronosticar el rendimiento de un algoritmo en relación con el tamaño de los datos de entrada.</p>
-                        
+                        <p>La <mark>complejidad algorítmica</mark> es un concepto fundamental en el análisis de
+                            algoritmos, diseñado para pronosticar el rendimiento de un algoritmo en relación con el
+                            tamaño de los datos de entrada.</p>
+
                         <div class="definition-box">
                             <h4><i class="fas fa-calculator"></i> Notación Big-O</h4>
-                            <p>Es una <strong>representación matemática</strong> que describe cómo crece la complejidad de un algoritmo en función del tamaño de la entrada, generalmente denotado como "n".</p>
+                            <p>Es una <strong>representación matemática</strong> que describe cómo crece la complejidad
+                                de un algoritmo en función del tamaño de la entrada, generalmente denotado como "n".</p>
                         </div>
                     </div>
                 </section>
@@ -312,12 +250,16 @@
                         <div class="r-vstack">
                             <div class="fragment definition-box">
                                 <h5><i class="fas fa-chart-line"></i> Análisis del Peor Caso</h5>
-                                <p>Proveer una visión clara de cómo se comportará el algoritmo en el <strong>"peor de los casos"</strong>, es decir, en el escenario que exige la mayor cantidad de operaciones.</p>
+                                <p>Proveer una visión clara de cómo se comportará el algoritmo en el <strong>"peor de
+                                        los casos"</strong>, es decir, en el escenario que exige la mayor cantidad de
+                                    operaciones.</p>
                             </div>
 
                             <div class="fragment definition-box">
                                 <h5><i class="fas fa-tachometer-alt"></i> Eficiencia y Rendimiento</h5>
-                                <p>La notación Big-O mide la <strong>eficiencia y el rendimiento</strong> de un algoritmo utilizando la complejidad de tiempo y espacio, aunque no indica qué tan rápido es el tiempo de ejecución en términos absolutos.</p>
+                                <p>La notación Big-O mide la <strong>eficiencia y el rendimiento</strong> de un
+                                    algoritmo utilizando la complejidad de tiempo y espacio, aunque no indica qué tan
+                                    rápido es el tiempo de ejecución en términos absolutos.</p>
                             </div>
                         </div>
                     </div>
@@ -332,7 +274,8 @@
                                 <div style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
                                     <h5><i class="fas fa-equals"></i> O(1) - Constante</h5>
                                 </div>
-                                <div style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px; margin-top: 0.5rem;">
+                                <div
+                                    style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px; margin-top: 0.5rem;">
                                     <h5><i class="fas fa-chart-line"></i> O(n) - Lineal</h5>
                                     <small>Tiempo proporcional al tamaño</small>
                                 </div>
@@ -341,15 +284,18 @@
                                 <div style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px;">
                                     <h5><i class="fas fa-search"></i> O(log n) - Logarítmica</h5>
                                 </div>
-                                <div style="background: rgba(145, 0, 72, 0.1); padding: 1rem; border-radius: 8px; margin-top: 0.5rem;">
+                                <div
+                                    style="background: rgba(145, 0, 72, 0.1); padding: 1rem; border-radius: 8px; margin-top: 0.5rem;">
                                     <h5><i class="fas fa-square"></i> O(n²) - Cuadrática</h5>
                                     <small>Crecimiento cuadrático</small>
                                 </div>
                             </div>
                         </div>
                         <div class="fragment" style="margin-top: 1rem;">
-                            <div style="background: rgba(220, 53, 69, 0.1); padding: 1rem; border-radius: 8px; text-align: center;">
-                                <h5><i class="fas fa-exclamation-triangle"></i> O(2ⁿ) - Exponencial | O(n!) - Factorial</h5>
+                            <div
+                                style="background: rgba(220, 53, 69, 0.1); padding: 1rem; border-radius: 8px; text-align: center;">
+                                <h5><i class="fas fa-exclamation-triangle"></i> O(2ⁿ) - Exponencial | O(n!) - Factorial
+                                </h5>
                                 <small>Complejidades muy costosas</small>
                             </div>
                         </div>
@@ -365,7 +311,9 @@
                     <h3>2.1 Definición y Abstracción</h3>
                     <div class="concept-box">
                         <div class="definition-box">
-                            <p>El <strong>Tipo de Dato Abstracto (TDA)</strong> es un modelo matemático que se define en términos de un conjunto de datos u objetos al cual se le asocian una serie de operaciones.</p>
+                            <p>El <strong>Tipo de Dato Abstracto (TDA)</strong> es un modelo matemático que se define en
+                                términos de un conjunto de datos u objetos al cual se le asocian una serie de
+                                operaciones.</p>
                         </div>
 
                         <h4>Características Fundamentales:</h4>
@@ -396,20 +344,25 @@
                     <h3>2.2 Implementación del TDA</h3>
                     <div class="concept-box">
                         <div class="definition-box">
-                            <p>La separación entre la <strong>interfaz</strong> (qué hace) y la <strong>implementación</strong> (cómo lo hace) es crucial.</p>
+                            <p>La separación entre la <strong>interfaz</strong> (qué hace) y la
+                                <strong>implementación</strong> (cómo lo hace) es crucial.</p>
                         </div>
 
                         <div class="fragment">
                             <h4>Proceso de Implementación:</h4>
                             <ol style="text-align: left;">
-                                <li><strong>Encontrar una estructura de datos (ED)</strong> adecuada para representar el modelo subyacente</li>
-                                <li><strong>Escribir los procedimientos o funciones</strong> que cumplirán con las tareas definidas por las operaciones</li>
+                                <li><strong>Encontrar una estructura de datos (ED)</strong> adecuada para representar el
+                                    modelo subyacente</li>
+                                <li><strong>Escribir los procedimientos o funciones</strong> que cumplirán con las
+                                    tareas definidas por las operaciones</li>
                             </ol>
                         </div>
 
                         <div class="fragment definition-box" style="margin-top: 1rem;">
                             <h5><i class="fas fa-object-group"></i> Orientación a Objetos</h5>
-                            <p>El paradigma de orientación a objetos facilita esto mediante el <strong>encapsulamiento</strong> de datos y operaciones a través de clases e interfaces.</p>
+                            <p>El paradigma de orientación a objetos facilita esto mediante el
+                                <strong>encapsulamiento</strong> de datos y operaciones a través de clases e interfaces.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -417,25 +370,30 @@
                 <section data-auto-animate>
                     <h3>2.3 Ejemplos de TDA Fundamentales</h3>
                     <div class="concept-box">
-                        <p>Muchos de los TADs más importantes son <mark>contenedores de datos</mark>, es decir, agregaciones de múltiples datos en una unidad conceptual.</p>
-                        
+                        <p>Muchos de los TADs más importantes son <mark>contenedores de datos</mark>, es decir,
+                            agregaciones de múltiples datos en una unidad conceptual.</p>
+
                         <div class="r-vstack" style="margin-top: 1rem;">
-                            <div class="fragment" style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-list"></i> Listas</h5>
                                 <p>Colecciones secuenciales de elementos</p>
                             </div>
 
-                            <div class="fragment" style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-layer-group"></i> Pilas (Stack)</h5>
                                 <p>Colecciones que siguen la propiedad <strong>LIFO</strong> (Last In, First Out)</p>
                             </div>
 
-                            <div class="fragment" style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-stream"></i> Colas (Queue)</h5>
                                 <p>Colecciones que siguen la propiedad <strong>FIFO</strong> (First In, First Out)</p>
                             </div>
 
-                            <div class="fragment" style="background: rgba(145, 0, 72, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(145, 0, 72, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-sitemap"></i> Árboles y Diccionarios</h5>
                                 <p>Estructuras jerárquicas y conjuntos de pares clave-valor</p>
                             </div>
@@ -452,17 +410,19 @@
                     <h3>3.1 Clasificación General</h3>
                     <div class="concept-box">
                         <p>Las estructuras de datos se pueden clasificar, según su organización en memoria, como:</p>
-                        
+
                         <div class="r-hstack" style="margin-top: 2rem;">
                             <div class="column fragment">
-                                <div style="background: rgba(40, 167, 69, 0.1); padding: 2rem; border-radius: 8px; text-align: center;">
+                                <div
+                                    style="background: rgba(40, 167, 69, 0.1); padding: 2rem; border-radius: 8px; text-align: center;">
                                     <h4><i class="fas fa-th"></i> No Enlazadas</h4>
                                     <p><strong>Arreglos/Vectores</strong></p>
                                     <small>Representación Estática</small>
                                 </div>
                             </div>
                             <div class="column fragment">
-                                <div style="background: rgba(35, 53, 110, 0.1); padding: 2rem; border-radius: 8px; text-align: center;">
+                                <div
+                                    style="background: rgba(35, 53, 110, 0.1); padding: 2rem; border-radius: 8px; text-align: center;">
                                     <h4><i class="fas fa-project-diagram"></i> Enlazadas</h4>
                                     <p><strong>Nodos/Punteros</strong></p>
                                     <small>Representación Dinámica</small>
@@ -471,7 +431,8 @@
                         </div>
 
                         <div class="fragment definition-box" style="margin-top: 1rem;">
-                            <p>Esta elección tiene <strong>implicaciones directas</strong> en el coste temporal (Big-O) y espacial de las operaciones.</p>
+                            <p>Esta elección tiene <strong>implicaciones directas</strong> en el coste temporal (Big-O)
+                                y espacial de las operaciones.</p>
                         </div>
                     </div>
                 </section>
@@ -480,22 +441,26 @@
                     <h3>3.2 Representación Estática (Arreglo/Vector)</h3>
                     <div class="concept-box">
                         <div class="definition-box">
-                            <p>El espacio de almacenamiento se <strong>conoce en tiempo de compilación</strong> y se mantiene reservado durante la ejecución.</p>
+                            <p>El espacio de almacenamiento se <strong>conoce en tiempo de compilación</strong> y se
+                                mantiene reservado durante la ejecución.</p>
                         </div>
 
                         <h4>Características:</h4>
                         <div class="r-vstack">
-                            <div class="fragment" style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-arrows-alt-h"></i> Contigüidad</h5>
                                 <p>Los elementos se almacenan en ubicaciones de memoria contiguas</p>
                             </div>
 
-                            <div class="fragment" style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-bolt"></i> Acceso Directo - O(1)</h5>
                                 <p>Coste constante para insertar, modificar, obtener y borrar</p>
                             </div>
 
-                            <div class="fragment" style="background: rgba(220, 53, 69, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(220, 53, 69, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-exclamation-triangle"></i> Limitación - O(n)</h5>
                                 <p>Redimensionamiento requiere copiar todos los elementos</p>
                             </div>
@@ -507,22 +472,26 @@
                     <h3>3.3 Representación Dinámica (Nodo/Enlace)</h3>
                     <div class="concept-box">
                         <div class="definition-box">
-                            <p>El espacio de almacenamiento se <strong>obtiene durante la ejecución</strong>, a medida que se necesita.</p>
+                            <p>El espacio de almacenamiento se <strong>obtiene durante la ejecución</strong>, a medida
+                                que se necesita.</p>
                         </div>
 
                         <h4>Características:</h4>
                         <div class="r-vstack">
-                            <div class="fragment" style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-link"></i> Nodos y Punteros</h5>
                                 <p>Se usa memoria dinámica con punteros que direccionan células en memoria</p>
                             </div>
 
-                            <div class="fragment" style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-expand-arrows-alt"></i> Estructura Dinámica</h5>
                                 <p>La cantidad máxima de memoria no se conoce hasta finalizar la ejecución</p>
                             </div>
 
-                            <div class="fragment" style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-search"></i> Coste en Tiempo - O(n)</h5>
                                 <p>Operaciones como añadir, buscar y borrar en listas enlazadas</p>
                             </div>
@@ -571,7 +540,8 @@
                     <div class="concept-box">
                         <div class="r-hstack">
                             <div class="column">
-                                <div style="background: rgba(40, 167, 69, 0.1); padding: 1.5rem; border-radius: 8px; border-left: 4px solid rgba(40, 167, 69, 0.8);">
+                                <div
+                                    style="background: rgba(40, 167, 69, 0.1); padding: 1.5rem; border-radius: 8px; border-left: 4px solid rgba(40, 167, 69, 0.8);">
                                     <h4><i class="fas fa-th"></i> Representación Estática</h4>
                                     <ul style="text-align: left; font-size: 0.9em;">
                                         <li><strong>Acceso directo O(1)</strong></li>
@@ -582,7 +552,8 @@
                                 </div>
                             </div>
                             <div class="column">
-                                <div style="background: rgba(35, 53, 110, 0.1); padding: 1.5rem; border-radius: 8px; border-left: 4px solid rgba(35, 53, 110, 0.8);">
+                                <div
+                                    style="background: rgba(35, 53, 110, 0.1); padding: 1.5rem; border-radius: 8px; border-left: 4px solid rgba(35, 53, 110, 0.8);">
                                     <h4><i class="fas fa-project-diagram"></i> Representación Dinámica</h4>
                                     <ul style="text-align: left; font-size: 0.9em;">
                                         <li><strong>Flexibilidad en tamaño</strong></li>
@@ -611,7 +582,8 @@
                                 </div>
                                 <div class="flashcard-back">
                                     <h4>Complejidad Algorítmica</h4>
-                                    <p>Mide la <strong>eficiencia y rendimiento</strong> de un algoritmo describiendo cómo crece la complejidad en función del tamaño de entrada "n".</p>
+                                    <p>Mide la <strong>eficiencia y rendimiento</strong> de un algoritmo describiendo
+                                        cómo crece la complejidad en función del tamaño de entrada "n".</p>
                                     <small>Análisis del peor caso</small>
                                 </div>
                             </div>
@@ -626,7 +598,9 @@
                                 </div>
                                 <div class="flashcard-back">
                                     <h4>Modelo Matemático</h4>
-                                    <p>Un <strong>modelo matemático</strong> que define un conjunto de datos y operaciones, separando la <strong>interfaz</strong> de la <strong>implementación</strong>.</p>
+                                    <p>Un <strong>modelo matemático</strong> que define un conjunto de datos y
+                                        operaciones, separando la <strong>interfaz</strong> de la
+                                        <strong>implementación</strong>.</p>
                                     <small>Abstracción de datos</small>
                                 </div>
                             </div>
@@ -645,7 +619,8 @@
                                 </div>
                                 <div class="flashcard-back">
                                     <h4>O(1), O(n), O(log n), O(n²)</h4>
-                                    <p><strong>O(1):</strong> constante, <strong>O(n):</strong> lineal, <strong>O(log n):</strong> logarítmica, <strong>O(n²):</strong> cuadrática.</p>
+                                    <p><strong>O(1):</strong> constante, <strong>O(n):</strong> lineal, <strong>O(log
+                                            n):</strong> logarítmica, <strong>O(n²):</strong> cuadrática.</p>
                                     <small>De mejor a peor rendimiento</small>
                                 </div>
                             </div>
@@ -660,7 +635,8 @@
                                 </div>
                                 <div class="flashcard-back">
                                     <h4>Arreglos vs Punteros</h4>
-                                    <p><strong>Estática:</strong> arreglos con tamaño fijo O(1). <strong>Dinámica:</strong> nodos/punteros con flexibilidad O(n).</p>
+                                    <p><strong>Estática:</strong> arreglos con tamaño fijo O(1).
+                                        <strong>Dinámica:</strong> nodos/punteros con flexibilidad O(n).</p>
                                     <small>Velocidad vs flexibilidad</small>
                                 </div>
                             </div>
@@ -680,7 +656,9 @@
                                 </div>
                                 <div class="flashcard-back">
                                     <h4>Contenedores de Datos</h4>
-                                    <p><strong>Listas, Pilas (LIFO), Colas (FIFO), Diccionarios</strong> y <strong>Árboles</strong> - agregaciones de datos con operaciones específicas.</p>
+                                    <p><strong>Listas, Pilas (LIFO), Colas (FIFO), Diccionarios</strong> y
+                                        <strong>Árboles</strong> - agregaciones de datos con operaciones específicas.
+                                    </p>
                                     <small>Estructuras fundamentales</small>
                                 </div>
                             </div>
@@ -696,7 +674,8 @@
                                 </div>
                                 <div class="flashcard-back">
                                     <h4>Tiempo vs Espacio vs Flexibilidad</h4>
-                                    <p><strong>Arreglos:</strong> rápidos pero fijos. <strong>Listas enlazadas:</strong> flexibles pero lentas. <strong>Árboles:</strong> equilibrio óptimo.</p>
+                                    <p><strong>Arreglos:</strong> rápidos pero fijos. <strong>Listas enlazadas:</strong>
+                                        flexibles pero lentas. <strong>Árboles:</strong> equilibrio óptimo.</p>
                                     <small>Cada estructura tiene su lugar</small>
                                 </div>
                             </div>
@@ -710,11 +689,16 @@
                 <h2>Referencias (Formato APA)</h2>
                 <div style="font-size: 0.7em; text-align: left; max-height: 500px; overflow-y: auto;">
                     <p>Alves, S. (2024, 29 de octubre). Complejidad algorítmica: Notación Big-O. Alveritmos.</p>
-                    <p>Campos, J. (2022). <em>Apuntes de Estructuras de Datos y Algoritmos</em> (2a ed., v. 4). Departamento de Informática e Ingeniería de Sistemas, Universidad de Zaragoza.</p>
-                    <p>Corporación Universitaria Remington. (s.f.). <em>Estructuras de Datos</em>. (Obra publicada bajo licencia Creative Commons).</p>
-                    <p>De León, H. [@hdeleonnet]. (2024, 18 de abril). Notación Big O Explicado con Código [Video]. YouTube.</p>
-                    <p>Señas, P., & Martig, S. (2005). <em>Estructuras de Datos y Algoritmos: Módulo I Tipos de datos, estructuras de datos y tipos de datos abstractos</em>.</p>
-                    <p>Villca Gutierrez, C. F. (Traductor). (2024, 1 de febrero). Guía: Notación Big O - Gráfico de complejidad de tiempo. freeCodeCamp.</p>
+                    <p>Campos, J. (2022). <em>Apuntes de Estructuras de Datos y Algoritmos</em> (2a ed., v. 4).
+                        Departamento de Informática e Ingeniería de Sistemas, Universidad de Zaragoza.</p>
+                    <p>Corporación Universitaria Remington. (s.f.). <em>Estructuras de Datos</em>. (Obra publicada bajo
+                        licencia Creative Commons).</p>
+                    <p>De León, H. [@hdeleonnet]. (2024, 18 de abril). Notación Big O Explicado con Código [Video].
+                        YouTube.</p>
+                    <p>Señas, P., & Martig, S. (2005). <em>Estructuras de Datos y Algoritmos: Módulo I Tipos de datos,
+                            estructuras de datos y tipos de datos abstractos</em>.</p>
+                    <p>Villca Gutierrez, C. F. (Traductor). (2024, 1 de febrero). Guía: Notación Big O - Gráfico de
+                        complejidad de tiempo. freeCodeCamp.</p>
                 </div>
             </section>
 
@@ -820,24 +804,32 @@
                     <h3>Puntos Clave de la Semana 1</h3>
                     <div class="concept-box">
                         <div class="r-vstack">
-                            <div class="fragment" style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-chart-line"></i> Notación Big-O</h5>
-                                <p>Herramienta fundamental para <strong>analizar la eficiencia</strong> de algoritmos y estructuras de datos</p>
+                                <p>Herramienta fundamental para <strong>analizar la eficiencia</strong> de algoritmos y
+                                    estructuras de datos</p>
                             </div>
 
-                            <div class="fragment" style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(35, 53, 110, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-cube"></i> Tipos de Datos Abstractos</h5>
-                                <p>Permiten <strong>separar la interfaz de la implementación</strong>, facilitando el diseño modular</p>
+                                <p>Permiten <strong>separar la interfaz de la implementación</strong>, facilitando el
+                                    diseño modular</p>
                             </div>
 
-                            <div class="fragment" style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(233, 171, 33, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-memory"></i> Representación en Memoria</h5>
-                                <p>La elección entre <strong>estática y dinámica</strong> impacta directamente en el rendimiento</p>
+                                <p>La elección entre <strong>estática y dinámica</strong> impacta directamente en el
+                                    rendimiento</p>
                             </div>
 
-                            <div class="fragment" style="background: rgba(145, 0, 72, 0.1); padding: 1rem; border-radius: 8px;">
+                            <div class="fragment"
+                                style="background: rgba(145, 0, 72, 0.1); padding: 1rem; border-radius: 8px;">
                                 <h5><i class="fas fa-balance-scale"></i> Trade-offs</h5>
-                                <p>Cada representación tiene <strong>ventajas y desventajas</strong> que deben considerarse según el contexto</p>
+                                <p>Cada representación tiene <strong>ventajas y desventajas</strong> que deben
+                                    considerarse según el contexto</p>
                             </div>
                         </div>
                     </div>
@@ -875,7 +867,8 @@
             <section data-background-color="#f8f8f8">
                 <h2>Conclusión</h2>
                 <div class="concept-box">
-                    <p>Las estructuras de datos son fundamentales para el desarrollo de software eficiente que permite:</p>
+                    <p>Las estructuras de datos son fundamentales para el desarrollo de software eficiente que permite:
+                    </p>
                     <ul style="text-align: left;">
                         <li>Organizar y manipular datos de manera eficiente</li>
                         <li>Optimizar el rendimiento de algoritmos</li>
