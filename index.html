@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LTI_05U_ESD Estructura de Datos - Compendios Semanales</title>
+    <!-- UIDE Theme CSS -->
+    <link rel="stylesheet" href="assets/css/uide-theme.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="assets/images/Logo UIDE.png" alt="Logo UIDE" style="max-width: 150px; margin-bottom: 20px;">
+            <h1>LTI_05U_ESD · Estructura de Datos</h1>
+            <p>Compendios Semanales del Curso (Periodo mayo–agosto 2025)</p>
+            <div
+                style="margin-top: 1em; padding: 1em; background: rgba(255,255,255,0.7); border-radius: 8px; font-size: 0.9em;">
+                <strong>Escuela:</strong> Ciencias de la Computación — Ingeniería en Tecnologías de la Información<br>
+                <strong>Nivel:</strong> Quinto • <strong>Créditos:</strong> 2 • <strong>Sesiones:</strong> 32 horas<br>
+                <strong>Código:</strong> LTI_05U_ESD (Unidad básica) • <strong>Período:</strong> Mayo–Agosto 2025<br>
+                <strong>Prerrequisito:</strong> Ninguno • <strong>Correquisito:</strong> Ninguno<br>
+                <em>Prof. Charlie Alexander Cárdenas Toledo, M.Sc. — chcardenasto@uide.edu.ec</em>
+            </div>
+        </div>
+
+        <!-- Course Information Section -->
+        <div class="toc-section"
+            style="background: rgba(35, 53, 110, 0.1); border-radius: 12px; padding: 2em; margin-bottom: 2em;">
+            <h2 style="color: var(--uide-primary); margin-bottom: 0.5em;">📋 Información del Curso</h2>
+            <p class="toc-subtitle" style="margin-bottom: 1.5em;">Detalles académicos y organizativos</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5em;">
+                <div
+                    style="background: white; padding: 1.5em; border-radius: 8px; border-left: 4px solid var(--uide-primary);">
+                    <h3 style="margin: 0 0 1em 0; color: var(--uide-primary);">🕐 Horarios</h3>
+                    <p style="margin: 0.5em 0;"><strong>Clases:</strong> Miércoles, 15:00 – 18:00</p>
+                    <p style="margin: 0.5em 0;"><strong>Tutorías:</strong> Viernes, 11:00 – 12:00</p>
+                    <p style="margin: 0.5em 0;"><strong>Componentes:</strong> Docencia 2 h • Práctica 1 h • Autónomo 3 h (semanales)</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 1.5em; border-radius: 8px; border-left: 4px solid var(--uide-secondary);">
+                    <h3 style="margin: 0 0 1em 0; color: var(--uide-secondary);">🎯 Propósito y Resultados</h3>
+                    <p style="margin: 0.5em 0;">Prepara a los estudiantes para analizar, diseñar e implementar soluciones que aprovechen al máximo la eficiencia computacional. Combina fundamentos de complejidad algorítmica con la implementación práctica de estructuras de datos.</p>
+                    <ul style="margin: 0.5em 0 0 1.2em;">
+                        <li>Analizar la complejidad de algoritmos utilizando la notación Big-O y micro-benchmarks.</li>
+                        <li>Diseñar e implementar estructuras de datos fundamentales (arrays, listas, pilas, colas).</li>
+                        <li>Aplicar técnicas de búsqueda y ordenación según contexto y eficiencia.</li>
+                        <li>Desarrollar estructuras avanzadas (tablas hash, árboles BST, AVL, heaps).</li>
+                        <li>Modelar y recorrer grafos mediante BFS y DFS con representaciones óptimas.</li>
+                        <li>Documentar y comunicar soluciones técnicas de manera clara y profesional.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Resources Section -->
+        <div class="toc-section"
+            style="background: rgba(35, 53, 110, 0.1); border-radius: 12px; padding: 2em; margin-bottom: 2em;">
+            <h2 style="color: var(--uide-primary); margin-bottom: 0.5em;">📚 Recursos Educativos (Semana 0)</h2>
+            <p class="toc-subtitle" style="margin-bottom: 1.5em;">Material institucional y referencias de apoyo permanente</p>
+
+            <div class="weeks-grid" style="margin: 0; gap: 1em;">
+                <a href="semanas/semana-00/reglamentoestudiantil.html" class="week-card"
+                    style="border-left-color: var(--uide-accent); background: white;">
+                    <div class="week-number" style="background: var(--uide-accent);">Normativa</div>
+                    <div class="week-title">Reglamento General de Estudiantes UIDE 2025</div>
+                    <div class="week-description"><strong>Síntesis visual:</strong> Ámbito de aplicación, régimen académico, derechos, disciplina y servicios estudiantiles</div>
+                </a>
+
+                <a href="semanas/semana-00/calendario-academico-loja-octubre-marzo-2026.html" class="week-card"
+                    style="border-left-color: var(--uide-secondary); background: white;">
+                    <div class="week-number" style="background: var(--uide-secondary);">Calendario</div>
+                    <div class="week-title">Calendario Académico Loja · Oct 2025 – Mar 2026</div>
+                    <div class="week-description"><strong>Consulta rápida:</strong> Semanas académicas, feriados, evaluaciones y procesos administrativos del período</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Course Table of Contents -->
+        <div class="toc-section">
+            <h2>Compendios Semanales</h2>
+            <p class="toc-subtitle">Contenidos organizados cronológicamente por semanas</p>
+        </div>
+
+        <div class="weeks-grid">
+            <!-- Unidad 1: Introducción y estructura de datos fundamentales -->
+            <a href="semanas/semana-01/compendio-ed-semana1.html" class="week-card">
+                <div class="week-number">Semana 01</div>
+                <div class="week-title">Introducción y Fundamentos</div>
+                <div class="week-description"><strong>Unidad 1:</strong> Big-O (intro); TDA (visión general); representación en memoria (arreglo vs nodo/enlace).</div>
+            </a>
+
+            <a href="semanas/semana-02/compendio-ed-semana2.html" class="week-card">
+                <div class="week-number">Semana 02</div>
+                <div class="week-title">Arrays vs Listas</div>
+                <div class="week-description"><strong>Unidad 1:</strong> Arrays vs. listas (costes y usos); acceso secuencial vs aleatorio; invariantes de TDAs (contratos de operaciones).</div>
+            </a>
+
+            <a href="semanas/semana-03/compendio-ed-semana3.html" class="week-card">
+                <div class="week-number">Semana 03</div>
+                <div class="week-title">Pilas y Colas</div>
+                <div class="week-description"><strong>Unidad 1:</strong> Pilas y colas (APIs, casos borde); pruebas unitarias básicas sobre contratos; complejidad amortizada (intro con arreglo dinámico).</div>
+            </a>
+
+            <a href="semanas/semana-04/compendio-ed-semana4.html" class="week-card">
+                <div class="week-number">Semana 04</div>
+                <div class="week-title">Búsqueda y Micro-benchmarks</div>
+                <div class="week-description"><strong>Unidad 1:</strong> Micro-benchmarks para contrastar Big-O; herramientas de medición; búsqueda lineal y binaria (invariantes de búsqueda).</div>
+            </a>
+
+            <div class="week-card" style="border-left-color: #ff9800;">
+                <div class="week-number">Semana 05</div>
+                <div class="week-title">Evaluación Diagnóstica</div>
+                <div class="week-description">Evaluación teórica y práctica (GA) + Proyecto Fase I; prácticas/TA de semanas 1–4.</div>
+            </div>
+
+            <!-- Unidad 2: Estructura de datos lineales -->
+            <a href="semanas/semana-06/compendio-ed-semana6.html" class="week-card">
+                <div class="week-number">Semana 06</div>
+                <div class="week-title">Diseño Modular</div>
+                <div class="week-description"><strong>Unidad 2:</strong> Diseño modular (interfaces/implementaciones) en Java/Python; genéricos/iteradores; buenas prácticas de pruebas.</div>
+            </a>
+
+            <a href="semanas/semana-07/compendio-ed-semana7.html" class="week-card">
+                <div class="week-number">Semana 07</div>
+                <div class="week-title">Listas Doblemente Enlazadas</div>
+                <div class="week-description"><strong>Unidad 2:</strong> Listas doblemente enlazadas: inversión; eliminación por valor/índice; casos borde; iteradores y recorridos.</div>
+            </a>
+
+            <a href="semanas/semana-08/compendio-ed-semana8.html" class="week-card">
+                <div class="week-number">Semana 08</div>
+                <div class="week-title">Tablas Hash</div>
+                <div class="week-description"><strong>Unidad 2:</strong> Tablas hash (Map/Set): función hash, colisiones, load factor, redimensionamiento; comparación arrays/listas vs hashing.</div>
+            </a>
+
+            <a href="semanas/semana-09/compendio-ed-semana9.html" class="week-card">
+                <div class="week-number">Semana 09</div>
+                <div class="week-title">Algoritmos de Ordenamiento</div>
+                <div class="week-description"><strong>Unidad 2:</strong> Selección e inserción; estabilidad, in-place; mejores/peores casos; cuándo usarlos.</div>
+            </a>
+
+            <div class="week-card" style="border-left-color: #28a745;">
+                <div class="week-number">Semana 10</div>
+                <div class="week-title">Evaluación Formativa</div>
+                <div class="week-description">Evaluación teórica y práctica (GA) + Proyecto Fase II; prácticas/TA de semanas 6–9.</div>
+            </div>
+
+            <!-- Unidad 3: Recursión y estructuras jerárquicas -->
+            <a href="semanas/semana-11/compendio-ed-semana11.html" class="week-card">
+                <div class="week-number">Semana 11</div>
+                <div class="week-title">Recursión</div>
+                <div class="week-description"><strong>Unidad 3:</strong> Árbol de recursión; pila de llamadas; trazas; diseño de funciones recursivas seguras.</div>
+            </a>
+
+            <a href="semanas/semana-12/compendio-ed-semana12.html" class="week-card">
+                <div class="week-number">Semana 12</div>
+                <div class="week-title">Heaps y Colas de Prioridad</div>
+                <div class="week-description"><strong>Unidad 3:</strong> Heaps y colas de prioridad: propiedades, heapify, usos; heap sort y relación con PQ.</div>
+            </a>
+
+            <a href="semanas/semana-13/compendio-ed-semana13.html" class="week-card">
+                <div class="week-number">Semana 13</div>
+                <div class="week-title">Árboles Binarios de Búsqueda</div>
+                <div class="week-description"><strong>Unidad 3:</strong> Árboles binarios: representaciones; recorridos (pre/in/post, nivel); BST: búsqueda/insert/eliminar.</div>
+            </a>
+
+            <a href="semanas/semana-14/compendio-ed-semana14.html" class="week-card">
+                <div class="week-number">Semana 14</div>
+                <div class="week-title">Árboles AVL</div>
+                <div class="week-description"><strong>Unidad 3:</strong> Balanceo (AVL): rotaciones, alturas, costes; comparación con otras variantes (breve).</div>
+            </a>
+
+            <a href="semanas/semana-15/compendio-ed-semana15.html" class="week-card">
+                <div class="week-number">Semana 15</div>
+                <div class="week-title">Grafos</div>
+                <div class="week-description"><strong>Unidad 3:</strong> Representaciones (lista vs matriz); BFS/DFS; costes y casos de uso; rutas de práctica.</div>
+            </a>
+
+            <div class="week-card" style="border-left-color: #dc3545;">
+                <div class="week-number">Semana 16</div>
+                <div class="week-title">Evaluación Sumativa</div>
+                <div class="week-description">Evaluación final (teórica y práctica) + presentación/defensa del proyecto final.</div>
+            </div>
+        </div>
+
+        <!-- Competencias Transversales -->
+        <div class="toc-section" style="margin-top: 2em;">
+            <h2>🎯 Competencias Transversales</h2>
+            <p class="toc-subtitle">Habilidades desarrolladas a lo largo del curso</p>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:1rem;">
+                <div class="card" style="background:#fff; border-left:4px solid var(--uide-primary); padding:1rem; border-radius:8px;">
+                    <h3>💬 Comunicación Efectiva</h3>
+                    <p>Documentar y comunicar soluciones técnicas de manera clara y profesional. Elaborar informes comparativos, ensayos y reportes de rendimiento.</p>
+                </div>
+                <div class="card" style="background:#fff; border-left:4px solid var(--uide-secondary); padding:1rem; border-radius:8px;">
+                    <h3>🚀 Desarrollo Personal y Profesional</h3>
+                    <p>Fomentar la responsabilidad, el trabajo sistemático y la autoevaluación mediante prácticas y proyectos por fases. Desarrollar autonomía en el análisis de resultados y pruebas.</p>
+                </div>
+                <div class="card" style="background:#fff; border-left:4px solid var(--uide-accent); padding:1rem; border-radius:8px;">
+                    <h3>🧠 Pensamiento Crítico y Sistémico</h3>
+                    <p>Analizar la eficiencia y complejidad de algoritmos con micro-benchmarks. Comparar métodos de búsqueda y ordenación según contexto.</p>
+                </div>
+                <div class="card" style="background:#fff; border-left:4px solid #28a745; padding:1rem; border-radius:8px;">
+                    <h3>💻 Cultura Digital</h3>
+                    <p>Utilizar herramientas de desarrollo, pruebas y benchmarking para evaluar estructuras y algoritmos. Aplicar buenas prácticas de programación y documentación técnica.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Evaluación -->
+        <div class="toc-section" style="margin-top: 2em;">
+            <h2>📊 Evaluación</h2>
+            <p class="toc-subtitle">Distribución por corte</p>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:1rem;">
+                <div class="card"
+                    style="background:#fff; border-left:4px solid #ff9800; padding:1rem; border-radius:8px;">
+                    <h3>Semana 5 — Diagnóstica (30%)</h3>
+                    <ul style="margin-left:1.2em;">
+                        <li><strong>GA (12%):</strong> Checkpoint invariantes (1), Invariantes búsqueda (1), Teórica (2), Práctica (4), Proyecto Fase I (4)</li>
+                        <li><strong>PE (9%):</strong> Diagrama memoria (2.25), Medir accesos (2.25), Stack/Queue + tests (2.25), Micro-benchmark búsqueda (2.25)</li>
+                        <li><strong>TA (9%):</strong> Ficha TDA (2.25), Mini informe array vs lista (2.25), Ensayo complejidad amortizada (2.25), Reporte con gráfica (2.25)</li>
+                    </ul>
+                </div>
+                <div class="card"
+                    style="background:#fff; border-left:4px solid #28a745; padding:1rem; border-radius:8px;">
+                    <h3>Semana 10 — Formativa (30%)</h3>
+                    <ul style="margin-left:1.2em;">
+                        <li><strong>GA (12%):</strong> Quiz hash (1), Cuestionario ordenación (1), Teórica (2), Práctica (4), Proyecto Fase II (4)</li>
+                        <li><strong>PE (9%):</strong> List<T> + iterador (2.25), DoublyLinkedList (2.25), HashMap/HashSet (2.25), Selection/Insertion (2.25)</li>
+                        <li><strong>TA (9%):</strong> Pruebas caja negra (2.25), Suite tests casos borde (2.25), Informe trade-offs (2.25), Cuadro comparativo (2.25)</li>
+                    </ul>
+                </div>
+                <div class="card"
+                    style="background:#fff; border-left:4px solid #dc3545; padding:1rem; border-radius:8px;">
+                    <h3>Semana 16 — Sumativa (40%)</h3>
+                    <ul style="margin-left:1.2em;">
+                        <li><strong>GA (16%):</strong> Recorridos cuestionario (2), Teórica (3), Práctica (5), Proyecto Fase III (6)</li>
+                        <li><strong>PE (12%):</strong> Funciones recursivas + trazas (2.4), BinaryHeap + PriorityQueue (2.4), BST completo (2.4), AVL balanceado (2.4), Grafo + BFS/DFS (2.4)</li>
+                        <li><strong>TA (12%):</strong> Nota técnica desbordes (2.4), Benchmark heapSort (2.4), Pruebas invariantes BST (2.4), Informe costes AVL (2.4), Mini-proyecto comparativo (2.4)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bibliografía -->
+        <div class="toc-section" style="margin-top: 2em;">
+            <h2>📚 Bibliografía</h2>
+            <p class="toc-subtitle">Básica y complementaria</p>
+            
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(400px,1fr)); gap:1.5rem;">
+                <div class="card" style="background:#fff; border-left:4px solid var(--uide-primary); padding:1.5rem; border-radius:8px;">
+                    <h3>📖 Bibliografía Básica</h3>
+                    <ul style="margin-left:1.2em;">
+                        <li>Karumanchi, N. (2020). <em>Data structures and algorithms made easy in java: Datastructure and algorithmic puzzles</em>. CareerMonk Publications.</li>
+                        <li>Fritelli, V., Guzman, A., & Tymoschuk, J. (2020). <em>Algoritmos y estructuras de datos (2 ed.)</em>. Jorge Sarmiento Editor - Universitas.</li>
+                    </ul>
+                </div>
+                
+                <div class="card" style="background:#fff; border-left:4px solid var(--uide-secondary); padding:1.5rem; border-radius:8px;">
+                    <h3>📑 Bibliografía Complementaria</h3>
+                    <ul style="margin-left:1.2em;">
+                        <li>Joyanes Aguilar, L. (2020). <em>Fundamentos de programación: algoritmos, estructura de datos y objetos</em>. McGraw-Hill.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card" style="background: rgba(233, 171, 33, 0.1); border-left:4px solid var(--uide-accent); padding:1rem; border-radius:8px; margin-top:1rem;">
+                <h3>🎓 Fuente ASU</h3>
+                <ul style="margin-left:1.2em;">
+                    <li>Arizona State University. (2024) - CSE 310 – Data Structures and Algorithms. Online</li>
+                    <li>Arizona State University. (2025) - Master Class: The Social Fabric: Understanding Organizations, Groups, and Networks (Apr 2025)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 - Curso Estructura de Datos (LTI_05U_ESD) - Universidad Internacional del Ecuador</p>
+            <p style="margin-top: 0.5em; font-size: 0.9em; opacity: 0.8;">
+                Horario: Miércoles 15:00–18:00 | Tutorías: Viernes 11:00–12:00<br>
+                <strong>Prof. Charlie Alexander Cárdenas Toledo, M.Sc.</strong> • chcardenasto@uide.edu.ec<br>
+                Tel: +593 22985600 Ext. 6008 • Móvil: +593980762456<br>
+                C. Agustín Carrión Palacios, Loja
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
