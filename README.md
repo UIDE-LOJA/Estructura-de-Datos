@@ -34,7 +34,7 @@ Los cursos indicados con el logotipo de ASU indican cursos que se complementan c
 
 **Nivel al que pertenece la asignatura:** Quinto
 
-**Periodo académico ordinario:** mayo – agosto 2025
+**Periodo académico ordinario:** octubre 2025 – febrero 2026
 
 **Estructura curricular:**
 
@@ -47,7 +47,7 @@ Los cursos indicados con el logotipo de ASU indican cursos que se complementan c
 
 **Correquisito(s):** Ninguno
 
-**Número de sesiones:** 32
+**Número de sesiones:** 48 horas/16 semanas
 
 **Horario de clases:** miércoles, 15:00 – 18:00
 
@@ -95,7 +95,7 @@ Al finalizar la asignatura, el estudiante estará en capacidad de:
 
 **Nombre del Coordinador/a Académico:** Mgs. Darío Javier Valarezo León
 
-**Ubicación / Dirección del establecimiento educativo:** C. Agustín Carrión Palacios, Loja
+**Ubicación / Dirección del establecimiento educativo:** C. Agustín Carrión Palacios, Sector Jipijapa, Loja
 
 **Teléfono del establecimiento educativo:** +593 22985600 Ext. 6008
 
@@ -244,13 +244,13 @@ Gestión de aprendizaje:
 
 • GA-3.1: Recorridos (pre/in/post/nivel) — cuestionario (2)
 
-• GA-3.2: Evaluación Teórica (3)
+• GA-3.2: Master class: The Social Fabric: Understanding Organizations, Groups, and Networks (1)
 
-• GA-3.3: Evaluación Práctica (5)
+• GA-3.3: Evaluación Teórica (2)
 
-• GA-3.4: Proyecto Fase III (6)
+• GA-3.4: Evaluación Práctica (5)
 
-GA-3.6: Proyecto Fase III – 7
+• GA-3.5: Proyecto Fase III (6)
 
 **40%**
 
