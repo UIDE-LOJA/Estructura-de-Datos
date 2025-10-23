@@ -1,0 +1,141 @@
+<p>Esta actividad práctica te permitirá aplicar los <strong>conceptos fundamentales de representación en memoria</strong> mediante la creación de diagramas comparativos entre estructuras estáticas y dinámicas. Te enfocarás en <em>visualizar la organización de memoria</em>, <em>identificar diferencias estructurales</em>, y <em>analizar las implicaciones de rendimiento</em> usando diagramas técnicos precisos.</p>
+
+<p><strong>¿Qué realizarás?</strong></p>
+
+<div class="_tableContainer_1rjym_1">
+    <div class="group _tableWrapper_1rjym_13 flex w-fit flex-col-reverse">
+        <table class="w-fit min-w-(--thread-content-width)" style="border-collapse: collapse; width: 99.9997%; height: 289.556px;" border="1">
+            <thead>
+                <tr style="height: 26.5875px;">
+                    <th style="width: 23.5306%; height: 26.5875px;" data-col-size="sm">Actividad</th>
+                    <th style="width: 47.0612%; height: 26.5875px;" data-col-size="xl">Instrucciones específicas</th>
+                    <th style="width: 29.3864%; height: 26.5875px;" data-col-size="md">Entregable</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="height: 52.5937px;">
+                    <td style="height: 52.5937px; width: 23.5306%;" data-col-size="sm">Preparación individual</td>
+                    <td style="height: 52.5937px; width: 47.0612%;" data-col-size="xl">Revisa Compendio Semana 1: Representación en memoria (arreglo vs nodo/enlace). Prepara materiales de dibujo o herramientas digitales.</td>
+                    <td style="height: 52.5937px; width: 29.3864%;" data-col-size="md">Comprensión de conceptos de memoria y herramientas preparadas.</td>
+                </tr>
+                <tr style="height: 52.5937px;">
+                    <td style="height: 52.5937px; width: 23.5306%;" data-col-size="sm">Análisis individual</td>
+                    <td style="height: 52.5937px; width: 47.0612%;" data-col-size="xl">Crea diagramas de memoria para los 3 casos dados: Lista con arreglo contiguo, Lista con nodos enlazados, y Pila implementada con ambos métodos. Incluye direcciones de memoria y punteros.</td>
+                    <td style="height: 52.5937px; width: 29.3864%;" data-col-size="md">3 diagramas técnicos con representación detallada de memoria.</td>
+                </tr>
+                <tr style="height: 52.5937px;">
+                    <td style="height: 52.5937px; width: 23.5306%;" data-col-size="sm">Trabajo grupal</td>
+                    <td style="height: 52.5937px; width: 47.0612%;" data-col-size="xl">Grupos de 3-4 estudiantes comparan diagramas y preparan análisis de 3 minutos sobre ventajas/desventajas de cada representación.</td>
+                    <td style="height: 52.5937px; width: 29.3864%;" data-col-size="md">Consenso grupal y análisis comparativo preparado.</td>
+                </tr>
+                <tr style="height: 52.5937px;">
+                    <td style="height: 52.5937px; width: 23.5306%;" data-col-size="sm">Presentación plenaria</td>
+                    <td style="height: 52.5937px; width: 47.0612%;" data-col-size="xl">Cada grupo presenta su análisis comparativo (3 min) explicando cuándo usar cada representación según el contexto.</td>
+                    <td style="height: 52.5937px; width: 29.3864%;" data-col-size="md">Participación activa en debate técnico sobre estructuras de datos.</td>
+                </tr>
+                <tr style="height: 52.5937px;">
+                    <td style="height: 52.5937px; width: 23.5306%;" data-col-size="sm">Entrega final</td>
+                    <td style="height: 52.5937px; width: 47.0612%;" data-col-size="xl">Refina diagramas individuales e incluye tabla comparativa con análisis de complejidad Big-O para cada operación.</td>
+                    <td style="height: 52.5937px; width: 29.3864%;" data-col-size="md">Diagramas finales con tabla de análisis Big-O.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p><strong>Casos de estudio para diagramar</strong></p>
+
+<div class="_tableContainer_1rjym_1">
+    <div class="group _tableWrapper_1rjym_13 flex w-fit flex-col-reverse">
+        <table class="w-fit min-w-(--thread-content-width)" style="border-collapse: collapse; width: 100%;" border="1">
+            <thead>
+                <tr>
+                    <th style="width: 25%;" data-col-size="md">Caso</th>
+                    <th style="width: 35%;" data-col-size="lg">Representación Estática (Arreglo)</th>
+                    <th style="width: 40%;" data-col-size="xl">Representación Dinámica (Nodos/Enlaces)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-col-size="md"><strong>1. Lista Simple</strong><br><small>Elementos: [10, 20, 30, 40]</small></td>
+                    <td data-col-size="lg">Diagrama de arreglo contiguo con índices 0-3. Mostrar direcciones de memoria consecutivas.</td>
+                    <td data-col-size="xl">Diagrama de nodos enlazados con punteros. Incluir puntero head y enlaces next.</td>
+                </tr>
+                <tr>
+                    <td data-col-size="md"><strong>2. Pila (Stack)</strong><br><small>Elementos: [A, B, C] (C en top)</small></td>
+                    <td data-col-size="lg">Arreglo con variable top apuntando al último elemento. Mostrar crecimiento hacia arriba.</td>
+                    <td data-col-size="xl">Nodos enlazados con puntero top al primer nodo. Mostrar operaciones push/pop.</td>
+                </tr>
+                <tr>
+                    <td data-col-size="md"><strong>3. Cola (Queue)</strong><br><small>Elementos: [X, Y, Z] (X front, Z rear)</small></td>
+                    <td data-col-size="lg">Arreglo circular con punteros front y rear. Mostrar manejo de índices circulares.</td>
+                    <td data-col-size="xl">Nodos enlazados con punteros front y rear. Mostrar operaciones enqueue/dequeue.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p><strong>Elementos requeridos en cada diagrama:</strong></p>
+<ul>
+    <li><strong>Direcciones de memoria:</strong> Usar direcciones hexadecimales simuladas (ej: 0x1000, 0x1004)</li>
+    <li><strong>Punteros:</strong> Flechas claras indicando referencias entre elementos</li>
+    <li><strong>Datos:</strong> Valores almacenados en cada posición</li>
+    <li><strong>Variables de control:</strong> Índices, punteros head/tail/top según corresponda</li>
+    <li><strong>Memoria no utilizada:</strong> Espacios vacíos en representación estática</li>
+</ul>
+
+<p><strong>Tabla de análisis Big-O requerida:</strong></p>
+
+<div class="_tableContainer_1rjym_1">
+    <div class="group _tableWrapper_1rjym_13 flex w-fit flex-col-reverse">
+        <table class="w-fit min-w-(--thread-content-width)" style="border-collapse: collapse; width: 100%;" border="1">
+            <thead>
+                <tr>
+                    <th style="width: 25%;" data-col-size="md">Operación</th>
+                    <th style="width: 25%;" data-col-size="md">Arreglo Contiguo</th>
+                    <th style="width: 25%;" data-col-size="md">Nodos Enlazados</th>
+                    <th style="width: 25%;" data-col-size="md">Justificación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-col-size="md">Acceso por índice</td>
+                    <td data-col-size="md">O(1)</td>
+                    <td data-col-size="md">O(n)</td>
+                    <td data-col-size="md">Explica por qué cada representación tiene esa complejidad.</td>
+                </tr>
+                <tr>
+                    <td data-col-size="md">Inserción al inicio</td>
+                    <td data-col-size="md">O(n)</td>
+                    <td data-col-size="md">O(1)</td>
+                    <td data-col-size="md">Explica por qué cada representación tiene esa complejidad.</td>
+                </tr>
+                <tr>
+                    <td data-col-size="md">Inserción al final</td>
+                    <td data-col-size="md">O(1) / O(n)*</td>
+                    <td data-col-size="md">O(1) / O(n)**</td>
+                    <td data-col-size="md">*Si hay espacio / **Con/sin puntero tail</td>
+                </tr>
+                <tr>
+                    <td data-col-size="md">Búsqueda de elemento</td>
+                    <td data-col-size="md">O(n)</td>
+                    <td data-col-size="md">O(n)</td>
+                    <td data-col-size="md">Explica por qué ambas tienen la misma complejidad.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p><strong>Materiales:</strong> Compendio Semana 1 - Representación en memoria, papel milimetrado o herramientas digitales (Draw.io, Lucidchart, PowerPoint).</p>
+
+<p><strong>Información importante</strong></p>
+<ul>
+    <li><p><strong>Modalidad:</strong> Taller presencial — <strong>2.25 pts</strong>.</p></li>
+    <li><p><strong>Duración:</strong> 90 minutos.</p></li>
+    <li><p><strong>Entrega:</strong> Diagramas y tabla completados al final de la clase.</p></li>
+    <li><p><strong>Formato:</strong> Digital (PDF) o físico con diagramas claros y legibles.</p></li>
+</ul>
+
+<p>Si tienes dudas durante la actividad, levanta la mano o utiliza el <strong>horario de tutorías (viernes 11:00-12:00)</strong>.</p>
