@@ -1,0 +1,423 @@
+/* Custom CSS for Semana 1 - Fundamentos de Estructuras de Datos */
+
+/* UIDE Color Variables */
+:root {
+    --uide-primary: #910048;      /* UIDE Burgundy */
+    --uide-secondary: #23356E;    /* UIDE Navy */
+    --uide-accent: #E9AB21;       /* UIDE Gold */
+    --uide-dark: #23356e;
+    --uide-light: #f8f9fa;
+}
+
+/* Title Slide Styling */
+.title-slide {
+    text-align: center;
+    padding: 2rem;
+}
+
+.title-slide h1 {
+    color: var(--uide-primary);
+    font-size: 2.5em;
+    margin-bottom: 0.5rem;
+}
+
+.title-slide h2 {
+    color: var(--uide-secondary);
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+}
+
+.course-info {
+    background: rgba(35, 53, 110, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-size: 0.9em;
+}
+
+/* Concept Boxes */
+.concept-box {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--uide-primary);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Interactive Elements */
+.interactive-box {
+    background: rgba(233, 171, 33, 0.2);
+    border-left: 4px solid var(--uide-accent);
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.timer-box {
+    background: rgba(145, 0, 72, 0.1);
+    border: 2px solid var(--uide-secondary);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* Column Layout */
+.r-hstack {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.column {
+    flex: 1;
+}
+
+/* Complexity Grid */
+.complexity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.complexity-card {
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid;
+    transition: transform 0.3s ease;
+}
+
+.complexity-card:hover {
+    transform: translateY(-2px);
+}
+
+.complexity-card.excellent {
+    background: rgba(145, 0, 72, 0.1);
+    border-color: var(--uide-primary);
+}
+
+.complexity-card.good {
+    background: rgba(23, 162, 184, 0.1);
+    border-color: #17a2b8;
+}
+
+.complexity-card.fair {
+    background: rgba(255, 193, 7, 0.1);
+    border-color: #ffc107;
+}
+
+.complexity-card.poor {
+    background: rgba(255, 152, 0, 0.1);
+    border-color: #ff9800;
+}
+
+.complexity-card.terrible {
+    background: rgba(220, 53, 69, 0.1);
+    border-color: #dc3545;
+}
+
+/* Growth Chart */
+.growth-chart {
+    background: rgba(248, 249, 250, 0.9);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+.chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.legend-item {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.legend-item.excellent {
+    background: var(--uide-primary);
+    color: white;
+}
+
+.legend-item.good {
+    background: #17a2b8;
+    color: white;
+}
+
+.legend-item.fair {
+    background: #ffc107;
+    color: black;
+}
+
+.legend-item.poor {
+    background: #ff9800;
+    color: white;
+}
+
+.legend-item.terrible {
+    background: #dc3545;
+    color: white;
+}
+
+/* TDA Examples */
+.tda-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.tda-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--uide-primary);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.tda-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tda-card i {
+    font-size: 2em;
+    color: var(--uide-primary);
+    margin-bottom: 0.5rem;
+}
+
+.tda-card h5 {
+    color: var(--uide-secondary);
+    margin: 0.5rem 0;
+}
+
+/* Memory Type Cards */
+.memory-type-card {
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 3px solid;
+    transition: all 0.3s ease;
+}
+
+.memory-type-card:hover {
+    transform: scale(1.05);
+}
+
+.memory-type-card.static {
+    background: rgba(145, 0, 72, 0.1);
+    border-color: var(--uide-primary);
+}
+
+.memory-type-card.dynamic {
+    background: rgba(35, 53, 110, 0.1);
+    border-color: var(--uide-dark);
+}
+
+.memory-type-card i {
+    font-size: 3em;
+    margin-bottom: 1rem;
+}
+
+.memory-type-card.static i {
+    color: var(--uide-primary);
+}
+
+.memory-type-card.dynamic i {
+    color: var(--uide-dark);
+}
+
+/* Characteristics Grid */
+.characteristics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.char-card {
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid;
+}
+
+.char-card i {
+    font-size: 2em;
+    margin-bottom: 0.5rem;
+}
+
+.char-card.excellent {
+    background: rgba(145, 0, 72, 0.1);
+    border-color: var(--uide-primary);
+}
+
+.char-card.excellent i {
+    color: var(--uide-primary);
+}
+
+.char-card.good {
+    background: rgba(23, 162, 184, 0.1);
+    border-color: #17a2b8;
+}
+
+.char-card.good i {
+    color: #17a2b8;
+}
+
+.char-card.fair {
+    background: rgba(255, 193, 7, 0.1);
+    border-color: #ffc107;
+}
+
+.char-card.fair i {
+    color: #f57c00;
+}
+
+.char-card.poor {
+    background: rgba(220, 53, 69, 0.1);
+    border-color: #dc3545;
+}
+
+.char-card.poor i {
+    color: #dc3545;
+}
+
+/* Implementation Steps */
+.implementation-steps {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.step-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--uide-primary);
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1;
+}
+
+.step-number {
+    background: var(--uide-primary);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.step-content h5 {
+    margin: 0 0 0.5rem 0;
+    color: var(--uide-secondary);
+}
+
+.step-content p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Advantages Cards */
+.advantages-card {
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.advantages-card.static {
+    background: rgba(145, 0, 72, 0.1);
+    border-color: var(--uide-primary);
+}
+
+.advantages-card.dynamic {
+    background: rgba(35, 53, 110, 0.1);
+    border-color: var(--uide-dark);
+}
+
+.advantages-card h4 {
+    color: var(--uide-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Tables */
+table {
+    font-size: 0.8em;
+    margin: 1rem 0;
+}
+
+table th {
+    background: var(--uide-primary);
+    color: white;
+    padding: 0.5rem;
+}
+
+table td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+}
+
+/* Icons */
+.fas {
+    margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .r-hstack {
+        flex-direction: column;
+    }
+    
+    .complexity-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    .tda-examples {
+        grid-template-columns: 1fr;
+    }
+    
+    .characteristics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .implementation-steps {
+        flex-direction: column;
+    }
+    
+    .title-slide h1 {
+        font-size: 2em;
+    }
+    
+    .title-slide h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Animation for Interactive Elements */
+.interactive-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Highlight styling */
+mark {
+    background: rgba(233, 171, 33, 0.3);
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+}
